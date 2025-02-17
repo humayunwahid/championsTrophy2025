@@ -11,7 +11,7 @@ const Event = () => {
   return (
     <>
       <HeaderOne />
-      <BreadcrumbEvent title="Fixtures & Results" subtitle="Fixtures & Results" />
+      <BreadcrumbEvent title="Fixtures" subtitle="Fixtures" />
       <FixturesList />
 			<MarqueeOne style_2={true} />
       <FooterOne />
