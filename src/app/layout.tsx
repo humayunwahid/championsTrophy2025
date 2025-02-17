@@ -1,5 +1,7 @@
 
 import "../styles/index.scss";
+import '../../globals.css';
+
 
 export default function RootLayout({
 	children,

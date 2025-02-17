@@ -1,0 +1,26 @@
+
+
+/* Custom */
+
+
+.header-main .main-menu ul li a{
+
+    font-size: 14px !important;
+    font-weight: 700;
+    text-transform: uppercase !important;
+  }
+  
+  .theme-btn.red-btn {
+    background-color: #e12b07 !important;
+  }
+  .point-table{
+   width: 100%;
+   text-align: left !important;
+  }
+  .point-table img{
+    width: 5%;
+   }
+  .mycustom-marque.header-marque.theme-blue-bg{
+
+    background-color: #000283 !important;
+  }
