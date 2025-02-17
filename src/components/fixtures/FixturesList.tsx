@@ -37,6 +37,7 @@ const FixturesList = () => {
       <div className="container">
         <div className="event-list-wrapper">
           {/* {fixtures.length > 0 ? ( */}
+          
             {fixtures.map((fixture) => (
               <div className="event-list-items" key={fixture._id}>
                 <div className="event-content">
@@ -51,40 +52,64 @@ const FixturesList = () => {
                       </span>
                     </div>
                     <div className="title-text">
-                      <h4>
+                      <h5>
                         <Link href="/event-details">{fixture.name}</Link>
-                      </h4>
+                      </h5>
                       <ul className="post-time">
                         <li>
                           <i className="far fa-map-marker-alt"></i>
-                          {fixture.venue}
+                          {fixture.venue.split(", ")[0]} {/* First part (Stadium) */}
+                        </li>
+                        <li>
+                          <i className="far fa-map-marker-alt"></i>
+                          {fixture.venue.split(", ").slice(1).join(", ")} {/* Remaining part (City, Country) */}
                         </li>
                         <li>
                           <i className="far fa-clock"></i>
-                          {new Date(fixture.date).toLocaleTimeString()}
+                          {fixture.time}
                         </li>
                       </ul>
+
+                      
                     </div>
                   </div>
                 </div>
-                <div className="event-image">
-                  <img src="assets/img/event/list/01.jpg" alt="event" />
+                {/* Dynamic Flag Images */}
+                <div className="event-image d-flex align-items-center gap-2 p-3 grey-background rounded">
+                  {fixture.teams.map((team, index) => (
+                    <React.Fragment key={index}>
+                      <div>
+                        <img
+                          src={`/assets/img/flags/${team.toLowerCase().replace(/\s+/g, "")}.png`}
+                          alt={`${team} Flag`}
+                          className="img-fluid"
+                        />
+                      </div>
+                      {index === 0 && ( // Only add "vs" after the first image
+                        <div>
+                          <p className="fw-bold fs-4 m-0">vs</p>
+                        </div>
+                      )}
+                    </React.Fragment>
+                  ))}
                 </div>
-                <div className="event-btn">
+
+
+                {/* <div className="event-btn">
                   <Link href="/event-details" className="theme-btn">
                     Book A Seat
                   </Link>
-                </div>
+                </div> */}
               </div>
             ))}
           {/* ) : (
             <p>Loading fixtures...</p>
           )} */}
-          <div className="event-button">
+          {/* <div className="event-button">
             <Link href="/event-details" className="theme-btn">
               View All Events
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
