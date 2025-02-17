@@ -1,11 +1,4 @@
-/*
-Theme Name: Eduspace
-Author: ModinaTheme
-Author URI: https://themeforest.net/user/modinatheme/
-Description: Eduspace - Online Course, Education & University Html Template
-Version: 1.1.0
-*/
-/*CSS Table Of Content Ends Here*/
+
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 :root {
   --body: #fff;
@@ -69,6 +62,9 @@ Version: 1.1.0
 .theme-btn i {
   margin-left: 5px;
 }
+
+
+
 
 .theme-btn::after, .theme-btn::before {
   content: "";
@@ -17997,20 +17993,12 @@ p {
   font-weight: 500;
   text-transform: capitalize;
 }
+
+
+
 /*# sourceMappingURL=main.css.map */
 
 
 
-/* Custom */
 
 
-.header-main .main-menu ul li a{
-
-  font-size: 14px !important;
-  font-weight: 700;
-  text-transform: uppercase !important;
-}
-
-.theme-btn.red-btn {
-  background-color: var(--theme-custom) !important;
-}
