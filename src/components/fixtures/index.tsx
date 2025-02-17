@@ -4,7 +4,7 @@ import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import MarqueeOne from '@/common/MarqueeOne';
 import BreadcrumbEvent from '@/common/breadcrumb/BreadcrumbEvent';
-import FixturesList from './fixturesList';
+import FixturesList from './FixturesList';
 
 
 const Event = () => {
