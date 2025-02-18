@@ -8,7 +8,7 @@ const TeamList = () => {
 
     return (
         <>
-            <section className="team-section-5 fix section-padding pt-0">
+            <section className="team-section-5 fix section-padding p-4">
                 <div className="container">
                     <div className="section-title  text-center">
                         <h6 className="wow fadeInUp">

@@ -33,7 +33,7 @@ const HeaderOne = () => {
                                     <img src="assets/img/logo/championsTrophy2025.png" alt="logo-img" />
                                 </Link>
                             </div>
-                            <div className="category-oneadjust">
+                            {/* <div className="category-oneadjust">
                                <div className="dot">
                                     <img src="assets/img/logo/dot.png" alt="img" />
                                </div> 
@@ -52,7 +52,7 @@ const HeaderOne = () => {
                                   name=""
                                   placeholder="" />
 
-                            </div>
+                            </div> */}
                         </div>
                         <div className="header-right d-flex justify-content-end align-items-center">
                             <div className="mean__menu-wrapper">

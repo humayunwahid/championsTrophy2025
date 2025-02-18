@@ -5,7 +5,7 @@ import React from 'react';
 
 // Define an async function to fetch data
 async function fetchBlogPosts() {
-    const res = await fetch('https://a-sports.tv/api/jsonify.php/?count=5&cat=champions-trophy-2025&post_type=post&tax=post_tag');
+    const res = await fetch('https://a-sports.tv/api/jsonify.php/?count=4&cat=champions-trophy-2025&post_type=post&tax=post_tag');
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
