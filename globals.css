@@ -11,7 +11,7 @@
   }
   
   .theme-btn.red-btn {
-    background-color: #e12b07 !important;
+    background-color: #da1900 !important;
   }
   .point-table{
    width: 100%;
@@ -20,11 +20,38 @@
   .point-table img{
     width: 5%;
    }
-  .mycustom-marque.header-marque.theme-blue-bg{
+  .mycustom-marque.header-marque.theme-blue-bg {
 
     background-color: #000283 !important;
   }
 
+  .event-list-wrapper .event-list-items .event-content .content .date{
+    background-color: #000283;
+  }
+
+  .event-list-wrapper .event-list-items .event-content .content .date:hover, .back-to-top{
+    background-color: #da1900;
+  }
+  .back-to-top:hover{
+    background-color: #000283;
+  }
+  .event-list-wrapper .event-list-items:hover .event-content .content .date {
+    background-color: #da1900;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Sora", system-ui;
+  margin: 0px;
+  padding: 0;
+  color: #000283;
+}
+
+.section-title h6, .section-title .h6{
+  color: #da1900;
+}
+.header-1 .header-right .header-button .theme-btn:hover{
+  background-color: #000283 !important;
+}
 
   .news-right-items .news-right-box .thumb{
 
@@ -66,4 +93,24 @@
 .news-left-items .news-content .link-btn{
 
   margin-top: 0px;
+}
+
+
+.footer-bg {
+  background-color: #da1900;
+}
+
+.breadcrumb-wrapper {
+  background: linear-gradient(to bottom, #000283 10%, rgba(0, 2, 131, 0.5) 70%), 
+              url(/assets/img/breadcrumb/breadcrumb.jpg);
+  background-position: center;
+  height: 400px;
+  background-size: cover;
+}
+
+.breadcrumb-wrapper::before{
+  position: relative;
+}
+.breadcrumb-wrapper .page-heading{
+  padding: 150px 0 100px;
 }

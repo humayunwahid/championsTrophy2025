@@ -30,9 +30,9 @@ const BreadcrumbEvent = ({title, subtitle} : any) => {
 								</li>
 								<li className="style-2">{subtitle}</li>
 							</ul>
-							<div className="breadcrumb-image">
+							{/* <div className="breadcrumb-image">
 								<img src="/assets/img/breadcrumb/breadcrumb.jpg" alt="img" />
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

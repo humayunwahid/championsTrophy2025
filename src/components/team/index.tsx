@@ -12,9 +12,9 @@ const Event = () => {
   return (
     <>
       <HeaderOne />
-      <BreadcrumbEvent title="Event List" subtitle="Event List" />
+      <BreadcrumbEvent title="Participating Teams" subtitle="Teams" />
       <TeamList />
-			<MarqueeOne style_2={true} />
+			<MarqueeOne />
       <FooterTwo />
     </>
   );

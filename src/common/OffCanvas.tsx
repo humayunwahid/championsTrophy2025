@@ -13,7 +13,7 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                         <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                             <div className="offcanvas__logo">
                                 <Link href="/">
-                                    <img src="assets/img/logo/black-logo.svg" alt="logo-img" />
+                                    <img src="assets/img/logo/championsTrophy2025.png" alt="A Sports" />
                                 </Link>
                             </div>
                             <div className="offcanvas__close" onClick={() => setOpenCanvas(false)}>
@@ -22,18 +22,18 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                 </button>
                             </div>
                         </div>
-                        <h3 className="offcanvas-title">Hello There!</h3>
+                        {/* <h3 className="offcanvas-title">Hello There!</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, </p>
                         <div className="social-icon d-flex align-items-center">
                             <a href="#"><i className="fab fa-facebook-f"></i></a>
                             <a href="#"><i className="fab fa-twitter"></i></a>
                             <a href="#"><i className="fab fa-youtube"></i></a>
                             <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                        </div>
+                        </div> */}
                         <div className="mobile-menu fix mb-3 mean-container">
                           <MobileMenu />
                         </div>
-                        <div className="offcanvas__contact">
+                        {/* <div className="offcanvas__contact">
                             <h3>Information</h3>
                             <ul className="contact-list">
                                 <li>
@@ -60,7 +60,7 @@ const OffCanvas = ({setOpenCanvas, openCanvas} : any) => {
                                 <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link>
                                 <Link href="/register" className="theme-btn yellow-btn">Enroll Now</Link>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
