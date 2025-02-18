@@ -8,13 +8,14 @@ import TeamDetail from './TeamDetail';
 import FooterTwo from '@/layouts/footers/FooterTwo';
 
 
-const Event = () => {
+const Event = ({ teamid, teamData }) => {
+  // console.log(teamData + 78);
   return (
     <>
       <HeaderOne />
       <BreadcrumbEvent title="Event List" subtitle="Event List" />
-      <TeamDetail />
-			<MarqueeOne style_2={true} />
+      <TeamDetail teamData={teamData} />
+      <MarqueeOne style_2={true} />
       <FooterTwo />
     </>
   );

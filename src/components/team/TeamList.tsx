@@ -32,7 +32,7 @@ const TeamList = () => {
                                 </div>
                                 <div className="content">
                                     {/* <a href="/teamdetails/pakistan"><h4>PAKISTAN</h4></a> */}
-                                    <Link href="/teamdetails/pakistan"><h4>PAKISTAN</h4></Link>
+                                    <Link href="/teamdetails/Pakistan"><h4>PAKISTAN</h4></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -50,7 +50,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/pakistan"><h4>INDIA</h4></Link>
+                                    <Link href="/teamdetails/India"><h4>INDIA</h4></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -68,8 +68,8 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                            
-                                    <Link href="/teamdetails/pakistan"><h4>NEW ZEALAND</h4></Link>
+
+                                    <Link href="/teamdetails/New Zealand"><h4>NEW ZEALAND</h4></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -87,7 +87,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/pakistan"><h4>SOUTH AFRICA</h4></Link>
+                                    <Link href="/teamdetails/South Africa"><h4>SOUTH AFRICA</h4></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -105,7 +105,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/pakistan"><h4>AFGHANISTAN</h4></Link>
+                                    <Link href="/teamdetails/Afhganistan"><h4>AFGHANISTAN</h4></Link>
 
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
@@ -124,8 +124,8 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                 
-                                    <Link href="/teamdetails/pakistan"><h4>AUSTRAILIA</h4></Link>
+
+                                    <Link href="/teamdetails/Australia"><h4>AUSTRAILIA</h4></Link>
 
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
@@ -144,7 +144,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/pakistan"><h4>BANGLADESH</h4></Link>
+                                    <Link href="/teamdetails/Bangladesh"><h4>BANGLADESH</h4></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -162,13 +162,13 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/pakistan"><h4>ENGLAND</h4></Link>
+                                    <Link href="/teamdetails/England"><h4>ENGLAND</h4></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
                             </div>
                         </div>
-                       
+
 
                     </div>
                 </div>
