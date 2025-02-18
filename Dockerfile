@@ -12,8 +12,8 @@ RUN npm install
 # Copy the entire project (except files in .dockerignore)
 COPY . .
 
-# Expose the development server port
+# Expose the Next.js development server port
 EXPOSE 3001
 
-# Start the React app in development mode
-CMD ["npm", "start"]
+# Start the Next.js app in development mode
+CMD ["npm", "run", "dev"]
