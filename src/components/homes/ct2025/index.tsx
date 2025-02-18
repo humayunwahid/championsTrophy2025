@@ -38,7 +38,7 @@ const CT2025 = () => {
 			<FaqHomeTwo />
 			<BlogHomeTwo />
 			<MarqueeOne />
-			<FooterFour />
+			<FooterTwo />
 		</>
 	);
 };

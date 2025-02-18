@@ -16,7 +16,7 @@ const FooterTwo = () => {
                 <img src="assets/img/footer/Vector-2.png" alt="img" />
             </div>
             <div className="container">
-                <div className="footer-banner-items">
+                {/* <div className="footer-banner-items">
                     <div className="row g-4">
                         <div className="col-lg-6">
                             <div className="footer-banner">
@@ -47,8 +47,8 @@ const FooterTwo = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="footer-widget-wrapper">
+                </div> */}
+                {/* <div className="footer-widget-wrapper">
                     <div className="row">
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="single-footer-widget">
@@ -125,9 +125,9 @@ const FooterTwo = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="footer-bottom style-2">
-                    <p>Copyright © <Link href="/">Eduspace</Link>, all rights reserved.</p>
+                    <p>Copyright © <Link href="/">A Sports</Link>, all rights reserved.</p>
                 </div>
             </div>
         </footer>
