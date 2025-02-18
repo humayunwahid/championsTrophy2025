@@ -83,14 +83,14 @@ const menu_data:DataType[] = [
 	{
 		id: 2,
 		title: "News",
-		link: "/news",
+		link: "https://a-sports.tv/tag/champions-trophy-2025/",
     icon: "fas fa-phone-rotary-no",
 		has_dropdown: false,
 	},
 	{
 		id: 2,
-		title: "Official Broadcasters",
-		link: "/broadcasters",
+		title: "Top Performers",
+		link: "/",
     icon: "fas fa-phone-rotary-no",
 		has_dropdown: false,
 	},

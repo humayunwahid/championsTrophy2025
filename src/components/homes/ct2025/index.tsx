@@ -23,6 +23,9 @@ import BlogHomeCT2025 from "./BlogHomeCT2025";
 import TeamList from "@/components/team/TeamList";
 import FixturesList from "@/components/fixtures/FixturesList";
 import Standings from "@/components/standings/Standings";
+import PakistanTeamSquad from "@/components/teamdetails/PakistanTeamSquad";
+import BlogHomeOne from "../home/BlogHomeOne";
+import BlogsHomeTwoCT2025 from "./BlogsHomeTwoCT2025";
 
 const CT2025 = () => {
 	return (
@@ -34,8 +37,8 @@ const CT2025 = () => {
 			<TeamList/>
 			<Standings/>
 			<FixturesList/>
-			
-			<TopCategoryHomeTwo />
+			<PakistanTeamSquad/>
+			{/* <TopCategoryHomeTwo />
 			<PopularCoursesHomeTwo />
 			<MarqueeOne />
 			<EventHomeTwo />
@@ -45,7 +48,8 @@ const CT2025 = () => {
 			<CoursesHomeTwo />
 			<MarqueeOne />
 			<TestimonialHomeTwo />
-			<FaqHomeTwo />
+			<FaqHomeTwo /> */}
+			<BlogsHomeTwoCT2025/>
 			<MarqueeOne />
 			<FooterTwo />
 		</>
