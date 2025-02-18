@@ -24,32 +24,3 @@
 
     background-color: #000283 !important;
   }
-
-  .team-details-wrapper.custom{
-
-    margin-top: 0px !important;
-  }
-
-  
-.team-details-wrapper .team-details-items .team-details-content .details-list::before {
-  display: none;
-}
-
-.team-details-wrapper .team-details-items .team-details-content .details-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    position: relative;
-    background: #000283;
-    color: white;
-    text-align: center;
-    font-weight: 900 !important;
-    border-radius: 10px;
-}
-
-.team-details-wrapper .team-details-items .team-details-content .details-list li {
-  font-weight: 600 !important;
-}
-
