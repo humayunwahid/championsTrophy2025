@@ -24,3 +24,46 @@
 
     background-color: #000283 !important;
   }
+
+
+  .news-right-items .news-right-box .thumb{
+
+    max-width: 240px !important;
+  }
+  .news-left-items .news-thumb .post-box {
+    background-color: #000283;
+}
+
+.news-right-items .news-right-box .thumb .post-box{
+  background-color: #000283;
+}
+
+.news-right-items .news-right-box .content h5 a, .news-right-items .news-right-box .content .h5 a{
+  background-image: linear-gradient(#000283, #000283);
+}
+
+.news-right-items .news-right-box .content h5 a:hover, .news-right-items .news-right-box .content .h5 a:hover {
+  background-size: 100% 2px;
+  color: #000283;
+}
+
+.news-right-items .news-right-box .content .link-btn:hover{
+  color: #000283;
+}
+.news-left-items .news-content .link-btn:hover {
+  color: #000283;
+}
+
+.news-left-items:hover {
+  box-shadow: 10px 4px 30px #50505026;
+}
+
+.news-left-items::before{
+  border-top: 1px solid #000283;
+  border-left: 1px solid #000283;
+}
+
+.news-left-items .news-content .link-btn{
+
+  margin-top: 0px;
+}

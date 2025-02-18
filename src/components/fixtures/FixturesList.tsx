@@ -33,8 +33,16 @@ const FixturesList = () => {
   }, []);
 
   return (
-    <section className="event-list-section fix section-padding pt-0">
+    <section className="event-list-section fix  mx-auto section-padding pt-0 mt-5">
       <div className="container">
+      <div className="section-title text-center">
+                        <h6 className="wow fadeInUp">
+                        Stay Updated: Match Schedule, Scores & Outcomes
+                        </h6>
+                        <h2 className="wow fadeInUp" data-wow-delay=".3s">
+                        FIXTURES & RESULTS
+                        </h2>
+                    </div>
         <div className="event-list-wrapper">
           {/* {fixtures.length > 0 ? ( */}
           

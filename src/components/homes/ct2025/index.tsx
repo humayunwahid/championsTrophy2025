@@ -18,13 +18,23 @@ import FooterThree from "@/layouts/footers/FooterThree";
 import FooterFour from "@/layouts/footers/FooterFour";
 import FooterFive from "@/layouts/footers/FooterFive";
 import FooterOne from "@/layouts/footers/FooterOne";
+import BlogHomeThree from "../home-3/BlogHomeThree";
+import BlogHomeCT2025 from "./BlogHomeCT2025";
+import TeamList from "@/components/team/TeamList";
+import FixturesList from "@/components/fixtures/FixturesList";
+import Standings from "@/components/standings/Standings";
 
 const CT2025 = () => {
 	return (
 		<>
 			{/* <MarqueeOne /> */}
 			<HeaderOne />
-			<HeroHomeTwo />
+			<BlogHomeCT2025 />
+			{/* <HeroHomeTwo /> */}
+			<TeamList/>
+			<Standings/>
+			<FixturesList/>
+			
 			<TopCategoryHomeTwo />
 			<PopularCoursesHomeTwo />
 			<MarqueeOne />
@@ -36,7 +46,6 @@ const CT2025 = () => {
 			<MarqueeOne />
 			<TestimonialHomeTwo />
 			<FaqHomeTwo />
-			<BlogHomeTwo />
 			<MarqueeOne />
 			<FooterTwo />
 		</>

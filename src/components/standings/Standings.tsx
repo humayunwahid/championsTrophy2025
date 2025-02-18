@@ -51,8 +51,15 @@ const Standings = () => {
   }, []);
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-lg max-w-full mx-auto text-center">
-      <h2 className="text-2xl font-bold mb-4 text-center">Standings</h2>
+    <div className="p-4  rounded-lg max-w-full mx-auto text-center container">
+      <div className="section-title  text-center">
+                        <h6 className="wow fadeInUp">
+                        Track Team Performance: Points, Matches, Wins & NRR
+                        </h6>
+                        <h2 className="wow fadeInUp" data-wow-delay=".3s">
+                        STANDINGS
+                        </h2>
+                    </div>
       <div className="mb-4 text-center">
         <label className="font-semibold">Select Group:</label>
         <select
