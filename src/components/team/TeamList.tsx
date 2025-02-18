@@ -15,7 +15,7 @@ const TeamList = () => {
                             Teams Participating in
                         </h6>
                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                            Champions Trophy 2025
+                            CHAMPIONS TROPHY 2025
                         </h2>
                     </div>
                     <div className="row">
