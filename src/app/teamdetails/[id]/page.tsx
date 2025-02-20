@@ -7,10 +7,27 @@ interface TeamDetailPageProps {
 }
 
 // Fetch data on the server side
+// async function getTeamData(teamId: string) {
+//   const res = await fetch(`http://localhost:3001/api/squads/${teamId}`, { cache: "no-store" });
+//   return res.json();
+// }
+
 async function getTeamData(teamId: string) {
-  const res = await fetch(`http://localhost:3001/api/squads/${teamId}`, { cache: "no-store" });
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+  if (!API_BASE_URL) {
+    throw new Error("API base URL is not defined in environment variables.");
+  }
+
+  const res = await fetch(`${API_BASE_URL}/api/squads/${teamId}`, { cache: "no-store" });
+
+  if (!res.ok) {
+    throw new Error(`API error: ${res.status} ${res.statusText}`);
+  }
+
   return res.json();
 }
+
 
 // ✅ Dynamic Metadata Function
 export async function generateMetadata({ params }: TeamDetailPageProps): Promise<Metadata> {

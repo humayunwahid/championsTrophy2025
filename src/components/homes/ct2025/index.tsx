@@ -30,8 +30,25 @@ import BlogsHomeTwoCT2025 from "./BlogsHomeTwoCT2025";
 import TeamDetail from "@/components/teamdetails/TeamDetail";
 
 const CT2025 = async () => {
-  const res = await fetch(`http:localhost:3001/api/squads/Pakistan`, { cache: "no-store" });
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; // Use env variable
+
+  if (!API_BASE_URL) {
+    throw new Error("API base URL is not defined in environment variables.");
+  }
+
+  const res = await fetch(`${API_BASE_URL}/api/squads/Pakistan`, { cache: "no-store" });
+
+  if (!res.ok) {
+    throw new Error(`API error: ${res.status} ${res.statusText}`);
+  }
+
   const teamData = await res.json();
+
+
+// const CT2025 = async () => {
+//   const res = await fetch(`http:localhost:3001/api/squads/Pakistan`, { cache: "no-store" });
+//   const teamData = await res.json();
+  
 
   return (
     <>
