@@ -54,7 +54,7 @@ const ResultList = () => {
                                         </span>
                                     </div>
                                     <div className="title-text">
-                                        <h5><Link href="/event-details">{result.name}</Link></h5>
+                                        <h5><Link href="#">{result.name}</Link></h5>
                                         <ul className="post-time">
                                             <li>
                                                 <i className="far fa-map-marker-alt"></i>
