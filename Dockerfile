@@ -3,10 +3,9 @@
 # --------------------
 FROM node:18 AS builder
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json first to leverage caching
+# Copy package.json and package-lock.json
 COPY package*.json ./
 
 # Install dependencies
@@ -23,10 +22,8 @@ RUN npm run build
 # --------------------
 FROM node:18 AS runner
 
-# Set environment variables
 ENV NODE_ENV=production
 
-# Create and use /app as our working directory
 WORKDIR /app
 
 # Copy only needed files/folders from the builder stage
@@ -34,10 +31,10 @@ COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.js ./
 
-# Expose the port the app will run on (adjust if needed)
+# Uncomment & verify the path if you do have next.config.js
+# COPY --from=builder /app/next.config.js ./
+
 EXPOSE 3001
 
-# Start the Next.js app in production
 CMD ["npm", "start"]
