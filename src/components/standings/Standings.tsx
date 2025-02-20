@@ -34,7 +34,7 @@ const Standings = () => {
               lost: team.lost,
               tied: team.tied,
               points: team.points,
-              nrr: team["net rr"],
+              nrr: team["net_rr"],
             });
             return acc;
           },
