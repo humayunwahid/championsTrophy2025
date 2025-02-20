@@ -18,7 +18,7 @@
    text-align: left !important;
   }
   .point-table img{
-    width: 5%;
+    width: 10%;
    }
   .mycustom-marque.header-marque.theme-blue-bg {
 
@@ -189,4 +189,17 @@ ul.details-list {
       flex-wrap: wrap;
       gap: 10px !important;
   }
+  .point-table img{
+    width: 20% !important;
+   }
+   .team-row{
+    min-width: 200px !important;
+   }
+
+   .news-right-items .news-right-box .thumb {
+    max-width: 100% !important;
+}
+.team-details-wrapper .team-details-items .team-details-content .details-list{
+  padding: 10px !important;
+}
 }

@@ -90,7 +90,7 @@ const Standings = () => {
             {standingsData[selectedGroup].map((team, index) => (
               <tr key={index} className="border-b hover:bg-gray-100">
                 <td className="border p-2 font-semibold">{team.position}</td>
-                <td className="border p-2 font-semibold text-uppercase">
+                <td className="border p-2 font-semibold text-uppercase team-row">
                   <img src={`/assets/img/flags/${team.team.toLowerCase().replace(/\s+/g, "")}.png`} alt={team.team} className="inline-block w-6 h-6 mr-2 uppercase" /> {team.team}
                 </td>
                 <td className="border p-2">{team.played}</td>

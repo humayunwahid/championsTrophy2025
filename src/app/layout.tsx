@@ -31,6 +31,23 @@ export default function RootLayout({
         `}
       </Script>
 
+
+
+	  <script
+            dangerouslySetInnerHTML={{
+              __html: `
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/67551462/A-Sports-Home', [[970, 250], [750, 300], [950, 90], [728, 90],[320, 100], [320, 50]], 'div-gpt-ad-1740050113204-0').addService(googletag.pubads());
+    googletag.defineSlot('/67551462/A-Sports-RoS', [[320, 100], [970, 250], [320, 460], [930, 80], [460, 60], [960, 90], [468, 60], [970, 90], [729, 90], [930, 90], [468, 90]], 'div-gpt-ad-1740050160931-0').addService(googletag.pubads());
+	googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+
+  `,
+            }}
+          />
+
       <body>{children}</body>
     </html>
   );

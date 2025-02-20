@@ -37,7 +37,7 @@ const BlogHomeCT2025 = async () => {
                     {posts ?
 
                         <div className="row">
-                            <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div className="col-lg-6" data-wow-delay=".3s">
                                 <div className="news-left-items">
                                     <div className="news-thumb">
                                         <Link href={posts.specific_post[0].permalink}>
@@ -66,7 +66,7 @@ const BlogHomeCT2025 = async () => {
                             <div className="col-lg-6">
                                 <div className="news-right-items">
                                     {posts.specific_post?.slice(1, 4).map((post, index) => (
-                                        <div className="news-right-box wow fadeInUp" data-wow-delay=".3s" key={index}>
+                                        <div className="news-right-box" data-wow-delay=".3s" key={index}>
                                             <div className="thumb">
                                             <Link href={post.permalink}><img src={post.image} alt="img" /></Link>
                                                 <Link href={post.permalink} className="post-box">

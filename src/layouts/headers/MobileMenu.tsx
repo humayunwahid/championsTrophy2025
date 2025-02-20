@@ -65,10 +65,14 @@ const MobileMenu = () => {
 								 </ul> 
 							 </li>
 							 }
+
+							 
 									
 									</>
 								
 							}
+
+
                               
                  </React.Fragment>
                 )) } 
@@ -82,6 +86,7 @@ const MobileMenu = () => {
 						</li>
 
             ))} 
+			<li><Link href="/results">Results</Link></li>
 					</ul>
 				</nav>
 			</div>

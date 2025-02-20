@@ -28,6 +28,7 @@ import PakistanTeamSquad from "@/components/teamdetails/PakistanTeamSquad";
 import BlogHomeOne from "../home/BlogHomeOne";
 import BlogsHomeTwoCT2025 from "./BlogsHomeTwoCT2025";
 import TeamDetail from "@/components/teamdetails/TeamDetail";
+import LeaderboardHome from './../../Ads/LeaderboardHome';
 
 const CT2025 = async () => {
   const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL; // Use env variable
@@ -54,6 +55,7 @@ const CT2025 = async () => {
     <>
       
       <HeaderOne />
+      <LeaderboardHome/>
       <BlogHomeCT2025 />
       <TeamList />
       <Standings />

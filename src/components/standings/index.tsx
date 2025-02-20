@@ -6,6 +6,7 @@ import MarqueeOne from '@/common/MarqueeOne';
 import BreadcrumbEvent from '@/common/breadcrumb/BreadcrumbEvent';
 import Standings from './Standings';
 import FooterTwo from '@/layouts/footers/FooterTwo';
+import Leaderboard from './../Ads/Leaderboard';
 
 
 const Event = () => {
@@ -13,6 +14,7 @@ const Event = () => {
     <>
       <HeaderOne />
       <BreadcrumbEvent title="Standings" subtitle="Standings" />
+      <Leaderboard/>
       <Standings />
 			<MarqueeOne style_2={false} />
       <FooterTwo />

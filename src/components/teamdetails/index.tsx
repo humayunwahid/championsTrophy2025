@@ -8,6 +8,7 @@ import TeamDetail from './TeamDetail';
 import FooterTwo from '@/layouts/footers/FooterTwo';
 import { Metadata } from 'next';
 import Head from 'next/head';
+import Leaderboard from './../Ads/Leaderboard';
 
 
 const Event = ({ teamid, teamData }) => {
@@ -22,6 +23,7 @@ const Event = ({ teamid, teamData }) => {
 
       <HeaderOne />
       <BreadcrumbEvent title={decodeURIComponent(teamid) + " Cricket Team"} subtitle={decodeURIComponent(teamid) + " Team Details"} />
+      <Leaderboard/>
       <TeamDetail teamData={teamData} />
 			<MarqueeOne style_2={false} />
       <FooterTwo />
