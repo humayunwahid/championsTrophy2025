@@ -22,17 +22,17 @@ const HomeTwo = () => {
 			<HeroHomeTwo />
 			<TopCategoryHomeTwo />
 			<PopularCoursesHomeTwo />
-			<MarqueeOne />
+			<MarqueeOne style_2={false} />
 			<EventHomeTwo />
 			<ChooseHomeTwo />
 			<TeamHomeTwo />
 			<CertificateHomeTwo />
 			<CoursesHomeTwo />
-			<MarqueeOne />
+			<MarqueeOne style_2={false} />
 			<TestimonialHomeTwo />
 			<FaqHomeTwo />
 			<BlogHomeTwo />
-			<MarqueeOne />
+			<MarqueeOne style_2={false} />
 			<FooterTwo />
 		</>
 	);

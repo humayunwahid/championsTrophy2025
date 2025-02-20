@@ -1,3 +1,4 @@
+import Head from "next/head";
 import MarqueeOne from "@/common/MarqueeOne";
 import HeaderTwo from "@/layouts/headers/HeaderTwo";
 import React from "react";
@@ -26,34 +27,26 @@ import Standings from "@/components/standings/Standings";
 import PakistanTeamSquad from "@/components/teamdetails/PakistanTeamSquad";
 import BlogHomeOne from "../home/BlogHomeOne";
 import BlogsHomeTwoCT2025 from "./BlogsHomeTwoCT2025";
+import TeamDetail from "@/components/teamdetails/TeamDetail";
 
-const CT2025 = () => {
-	return (
-		<>
-			{/* <MarqueeOne /> */}
-			<HeaderOne />
-			<BlogHomeCT2025 />
-			{/* <HeroHomeTwo /> */}
-			<TeamList/>
-			<Standings/>
-			<FixturesList/>
-			<PakistanTeamSquad/>
-			{/* <TopCategoryHomeTwo />
-			<PopularCoursesHomeTwo />
-			<MarqueeOne />
-			<EventHomeTwo />
-			<ChooseHomeTwo />
-			<TeamHomeTwo />
-			<CertificateHomeTwo />
-			<CoursesHomeTwo />
-			<MarqueeOne />
-			<TestimonialHomeTwo />
-			<FaqHomeTwo /> */}
-			<BlogsHomeTwoCT2025/>
-			<MarqueeOne />
-			<FooterTwo />
-		</>
-	);
+const CT2025 = async () => {
+  const res = await fetch(`/api/squads/Pakistan`, { cache: "no-store" });
+  const teamData = await res.json();
+
+  return (
+    <>
+      
+      <HeaderOne />
+      <BlogHomeCT2025 />
+      <TeamList />
+      <Standings />
+      <FixturesList />
+      <PakistanTeamSquad teamData={teamData} teamid="Pakistan" />
+      <BlogsHomeTwoCT2025 cat="champions-trophy-2025" />
+			<MarqueeOne style_2={false} />
+      <FooterTwo />
+    </>
+  );
 };
 
 export default CT2025;

@@ -5,6 +5,7 @@ import HeaderOne from '@/layouts/headers/HeaderOne';
 import MarqueeOne from '@/common/MarqueeOne';
 import BreadcrumbEvent from '@/common/breadcrumb/BreadcrumbEvent';
 import ResultList from './ResultList';
+import FooterTwo from '@/layouts/footers/FooterTwo';
 
 
 const Event = () => {
@@ -13,8 +14,8 @@ const Event = () => {
       <HeaderOne />
       <BreadcrumbEvent title="Results" subtitle="Results" />
       <ResultList />
-			<MarqueeOne style_2={true} />
-      <FooterOne />
+			<MarqueeOne style_2={false} />
+      <FooterTwo />
     </>
   );
 };

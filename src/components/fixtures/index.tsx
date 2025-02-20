@@ -14,7 +14,7 @@ const Event = () => {
       <HeaderOne />
       <BreadcrumbEvent title="Fixtures" subtitle="Fixtures" />
       <FixturesList />
-			<MarqueeOne />
+			<MarqueeOne style_2={false} />
       <FooterTwo />
     </>
   );

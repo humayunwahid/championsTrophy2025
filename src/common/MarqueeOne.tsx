@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MarqueeOne = ({ style_2 }) => {
+const MarqueeOne = ({style_2 }) => {
   const marqueeItems = [
     "🏆 Champions Trophy 2025 - The Ultimate Showdown!",
     "🌟 Biggest Cricket Event of the Year!",
@@ -11,12 +11,12 @@ const MarqueeOne = ({ style_2 }) => {
 
   return (
     <div className="marquee-section style-header">
-      <div className={`mycustom-marque ${style_2 ? "theme-green-bg-1" : "header-marque theme-blue-bg"}`}>
+      <div className={`mycustom-marque header-marque theme-blue-bg`}>
         <div className="scrolling-wrap flex">
           {[...Array(3)].map((_, index) => (
             <div className="comm flex items-center" key={index}>
               {marqueeItems.map((item, idx) => (
-                <div key={idx} className={`cmn-textslide ${style_2 ? "text-color-2" : "text-white"}`}>
+                <div key={idx} className={`cmn-textslide text-white`}>
                  {item}
                 </div>
               ))}

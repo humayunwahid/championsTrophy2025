@@ -33,7 +33,7 @@ const FixturesList = () => {
   }, []);
 
   return (
-    <section className="event-list-section fix  mx-auto section-padding pt-0 mt-5">
+    <section className="event-list-section fix  mx-auto section-padding p-4">
       <div className="container">
       <div className="section-title text-center">
                         <h6 className="wow fadeInUp">
@@ -61,7 +61,7 @@ const FixturesList = () => {
                     </div>
                     <div className="title-text">
                       <h5>
-                        <Link href="/event-details">{fixture.name}</Link>
+                        <Link href="#">{fixture.name}</Link>
                       </h5>
                       <ul className="post-time">
                         <li>
@@ -83,7 +83,10 @@ const FixturesList = () => {
                   </div>
                 </div>
                 {/* Dynamic Flag Images */}
-                <div className="event-image d-flex align-items-center gap-2 p-3 grey-background rounded">
+                
+                <div className="event-image d-flex flex-column align-items-start gap-2 p-3 grey-background rounded">
+                <p className={`fw-bold text-uppercase status${fixture.status}`}>{fixture.status}</p>                
+                <div className="d-flex align-items-center gap-2">
                   {fixture.teams.map((team, index) => (
                     <React.Fragment key={index}>
                       <div>
@@ -93,7 +96,7 @@ const FixturesList = () => {
                           className="img-fluid"
                         />
                       </div>
-                      {index === 0 && ( // Only add "vs" after the first image
+                      {index === 0 && (
                         <div>
                           <p className="fw-bold fs-4 m-0">vs</p>
                         </div>
@@ -101,6 +104,7 @@ const FixturesList = () => {
                     </React.Fragment>
                   ))}
                 </div>
+              </div>
 
 
                 {/* <div className="event-btn">

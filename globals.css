@@ -114,3 +114,68 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .breadcrumb-wrapper .page-heading{
   padding: 150px 0 100px;
 }
+
+.team-details-wrapper{
+  margin-top: 0px;
+}
+
+.team-details-wrapper .team-details-items .team-details-content .details-list::before{
+  display: none;
+}
+
+
+ul.details-list {
+  background: #000283;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #00000070;
+}
+
+.team-details-wrapper .team-details-items .team-details-content .details-list li {
+  font-weight: 600;
+}
+
+.team-details-wrapper .team-details-items .team-details-content span {
+  font-size: 18px;
+  font-weight: 400;
+  background: #da1900;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+.team-details-wrapper{
+  box-shadow: 10px 4px 60px 0px rgba(189, 189, 189, 0.25);
+  margin: 20px 0px;
+    padding: 10px 10px 10px;
+}
+
+.section-padding{
+  padding: 40px 0;
+}
+
+
+.statuslive{
+  font-size: 10px;
+    background: #da1900;
+    padding: 0px 20px;
+    border-radius: 5px;
+    color: white;
+}
+.statusupcoming{
+  font-size: 10px;
+    background: #000283;
+    padding: 0px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.statuscompleted{
+  font-size: 10px;
+    background: black;
+    padding: 0px 20px;
+    border-radius: 5px;
+    color: white;
+}

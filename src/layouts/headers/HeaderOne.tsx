@@ -22,15 +22,15 @@ const HeaderOne = () => {
 
   return (
     <>
-    <MarqueeOne />
-     <header id="header-sticky" className={`header-1 ${sticky ? "sticky" : ""}`}>
+			<MarqueeOne style_2={false} />
+            <header id="header-sticky" className={`header-1 ${sticky ? "sticky" : ""}`}>
             <div className="container-fluid">
                 <div className="mega-menu-wrapper">
                     <div className="header-main">
                         <div className="header-left">
                             <div className="logo">
                                 <Link href="/" className="header-logo">
-                                    <img src="assets/img/logo/championsTrophy2025.png" alt="logo-img" />
+                                    <img src="/assets/img/logo/championsTrophy2025.png" alt="logo-img" />
                                 </Link>
                             </div>
                             {/* <div className="category-oneadjust">
@@ -69,7 +69,7 @@ const HeaderOne = () => {
                             </div> */}
                             <div className="header-button">
                                 {/* <Link href="/sign-in" className="theme-btn style-2"><i className="far fa-user"></i> Admin</Link> */}
-                                <Link href="/results" className="theme-btn red-btn">Results</Link>
+                                <Link href="/" className="theme-btn red-btn">Results</Link>
                             </div>
                             <div className="header__hamburger d-xl-none my-auto">
                                 <div className="sidebar__toggle">
