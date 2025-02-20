@@ -4,6 +4,7 @@ import FooterOne from '@/layouts/footers/FooterOne';
 import HeaderOne from '@/layouts/headers/HeaderOne';
 import Link from 'next/link';
 import React from 'react';
+import FooterTwo from './../../layouts/footers/FooterTwo';
 
 const Error = () => {
   return (
@@ -15,11 +16,11 @@ const Error = () => {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
-                        <div className="error-items text-center">
-                            <div className="error-image wow fadeInUp" data-wow-delay=".3s">
+                        <div className="error-items text-center mt-5">
+                            {/* <div className="error-image wow fadeInUp" data-wow-delay=".3s">
                                 <img src="assets/img/404.png" alt="img" />
-                            </div>
-                            <Link href="/" className="theme-btn wow fadeInUp" data-wow-delay=".5s">
+                            </div> */}
+                            <Link href="/" className="theme-btn red-btn wow fadeInUp" data-wow-delay=".5s">
                                 Back To Home
                             </Link>
                         </div>
@@ -29,7 +30,7 @@ const Error = () => {
         </div>
 
         <MarqueeOne style_2={true} />
-        <FooterOne />
+        <FooterTwo />
     </>
   );
 };

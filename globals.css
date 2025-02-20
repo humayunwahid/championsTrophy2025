@@ -179,3 +179,14 @@ ul.details-list {
     border-radius: 5px;
     color: white;
 }
+
+.result-btn{
+  background: #da1900 !important
+}
+
+@media (max-width: 767px) {
+  .event-list-wrapper .event-list-items .event-content .content .title-text .post-time {
+      flex-wrap: wrap;
+      gap: 10px !important;
+  }
+}

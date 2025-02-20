@@ -84,27 +84,38 @@ const FixturesList = () => {
                 </div>
                 {/* Dynamic Flag Images */}
                 
-                <div className="event-image d-flex flex-column align-items-start gap-2 p-3 grey-background rounded">
-                <p className={`fw-bold text-uppercase status${fixture.status}`}>{fixture.status}</p>                
-                <div className="d-flex align-items-center gap-2">
-                  {fixture.teams.map((team, index) => (
-                    <React.Fragment key={index}>
-                      <div>
-                        <img
-                          src={`/assets/img/flags/${team.toLowerCase().replace(/\s+/g, "")}.png`}
-                          alt={`${team} Flag`}
-                          className="img-fluid"
-                        />
-                      </div>
-                      {index === 0 && (
+                <div className="event-image d-flex flex-column align-items-start gap-2 grey-background rounded">
+                  {/* <p className={`fw-bold text-uppercase status${fixture.status}`}>{fixture.status}</p>                 */}
+                  <p className={`fw-bold text-uppercase status${fixture.status}`}>
+                    {fixture.result !== 'n/a' ? fixture.result : fixture.status}
+                  </p>
+               
+
+                  <div className="d-flex align-items-center gap-2">
+                    {fixture.teams.map((team, index) => (
+                      <React.Fragment key={index}>
                         <div>
-                          <p className="fw-bold fs-4 m-0">vs</p>
+                          <img
+                            src={`/assets/img/flags/${team.toLowerCase().replace(/\s+/g, "")}.png`}
+                            alt={`${team} Flag`}
+                            className="img-fluid"
+                          />
                         </div>
-                      )}
-                    </React.Fragment>
-                  ))}
+                        {index === 0 && (
+                          <div>
+                            <p className="fw-bold fs-4 m-0">vs</p>
+                          </div>
+                        )}
+                      </React.Fragment>
+                    ))}
+                    
+                  </div>
+                
                 </div>
-              </div>
+                
+                {/* <div className="event-btn"> 
+                    <b className="result-btn text-white rounded p-2">{fixture.result}</b>
+                </div> */}
 
 
                 {/* <div className="event-btn">

@@ -40,64 +40,65 @@ const ResultList = () => {
             <div className="container">
                 <div className="event-list-wrapper">
                 {resultList.map((result) => (
-                    <div className="event-list-items">
-                        <div className="event-content">
-                            <div className="content">
-                                <div className="date">
-                                    <h2>{new Date(result.date).getDate()}</h2>
-                                    <span>
-                                        {new Date(result.date).toLocaleString("default", {
-                                        month: "short",
-                                        year: "numeric",
-                                        })}
-                                    </span>
-                                </div>
-                                <div className="title-text">
-                                    <h5><Link href="/event-details">{result.name}</Link></h5>
-                                    <ul className="post-time">
-                                        <li>
-                                        <i className="far fa-map-marker-alt"></i>
-                                        {result.venue.split(", ")[0]} {/* First part (Stadium) */}
-                                        </li>
-                                        <li>
-                                        <i className="far fa-map-marker-alt"></i>
-                                        {result.venue.split(", ").slice(1).join(", ")} {/* Remaining part (City, Country) */}
-                                        </li>
-                                        <li>
-                                        <i className="far fa-clock"></i>
-                                        {result.time}
-                                        </li>
-                                    </ul>
+                result.result != "n/a" && (
+                        <div className="event-list-items" key={result.name}>
+                            <div className="event-content">
+                                <div className="content">
+                                    <div className="date">
+                                        <h2>{new Date(result.date).getDate()}</h2>
+                                        <span>
+                                            {new Date(result.date).toLocaleString("default", {
+                                                month: "short",
+                                                year: "numeric",
+                                            })}
+                                        </span>
+                                    </div>
+                                    <div className="title-text">
+                                        <h5><Link href="/event-details">{result.name}</Link></h5>
+                                        <ul className="post-time">
+                                            <li>
+                                                <i className="far fa-map-marker-alt"></i>
+                                                {result.venue.split(", ")[0]} {/* First part (Stadium) */}
+                                            </li>
+                                            <li>
+                                                <i className="far fa-map-marker-alt"></i>
+                                                {result.venue.split(", ").slice(1).join(", ")} {/* Remaining part (City, Country) */}
+                                            </li>
+                                            <li>
+                                                <i className="far fa-clock"></i>
+                                                {result.time}
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Dynamic Flag Images */}
-                            <div className="event-image d-flex align-items-center gap-2 p-3 grey-background rounded">
-                            {result.teams.map((team, index) => (
-                                <React.Fragment key={index}>
-                                <div>
-                                    <img
-                                    src={`/assets/img/flags/${team.toLowerCase().replace(/\s+/g, "")}.png`}
-                                    alt={`${team} Flag`}
-                                    className="img-fluid"
-                                    />
-                                </div>
-                                {index === 0 && ( // Only add "vs" after the first image
-                                    <div>
-                                    <p className="fw-bold fs-4 m-0">vs</p>
-                                    </div>
-                                )}
-                                </React.Fragment>
-                            ))}
+                            {/* Dynamic Flag Images */}
+                            <div className="event-image d-flex align-items-center gap-2 grey-background rounded">
+                                {result.teams.map((team, index) => (
+                                    <React.Fragment key={index}>
+                                        <div>
+                                            <img
+                                                src={`/assets/img/flags/${team.toLowerCase().replace(/\s+/g, "")}.png`}
+                                                alt={`${team} Flag`}
+                                                className="img-fluid"
+                                            />
+                                        </div>
+                                        {index === 0 && ( // Only add "vs" after the first image
+                                            <div>
+                                                <p className="fw-bold fs-4 m-0">vs</p>
+                                            </div>
+                                        )}
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                            <div className="event-btn"> 
+                                <b className="result-btn text-white rounded p-2">{result.result}</b>
+                            </div>
                         </div>
-                        <div className="event-btn"> 
-                            <Link href="/event-details" className="theme-btn">
-                                See Results
-                            </Link>
-                        </div>
-                    </div>
+                    )
                 ))}
+
                     {/* <div className="event-button">
                         <Link href="/event-details" className="theme-btn">View All Events</Link>
                     </div> */}
