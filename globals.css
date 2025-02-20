@@ -203,3 +203,12 @@ ul.details-list {
   padding: 10px !important;
 }
 }
+
+.title-text a{
+  color:#000283 !important
+
+}
+.title-text a:hover{
+  color:#da1900 !important
+
+}

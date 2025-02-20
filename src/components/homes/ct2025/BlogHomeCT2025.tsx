@@ -40,17 +40,17 @@ const BlogHomeCT2025 = async () => {
                             <div className="col-lg-6" data-wow-delay=".3s">
                                 <div className="news-left-items">
                                     <div className="news-thumb">
-                                        <Link href={posts.specific_post[0].permalink}>
-                                            <img src={posts.specific_post[0].image} alt="img" />
+                                        <Link  href={posts.specific_post[0].permalink} target="_blank" rel="noopener noreferrer">
+                                            <img src={posts.specific_post[0].image} alt={posts.specific_post[0].title} />
                                         </Link>
-                                        <Link href={posts.specific_post[0].permalink} className="post-box">
+                                        <Link  href={posts.specific_post[0].permalink} className="post-box" target="_blank" rel="noopener noreferrer">
                                             <i className="fal fa-calendar-alt"></i> {posts.specific_post[0].date}
                                         </Link>
                                     </div>
                                     <div className="news-content">
 
                                         <h3>
-                                            <Link href={posts.specific_post[0].permalink}>{posts.specific_post[0].title}</Link>
+                                            <Link  href={posts.specific_post[0].permalink} target="_blank" rel="noopener noreferrer">{posts.specific_post[0].title}</Link>
                                         </h3>
                                         <ul className="post-cat">
                                             <li>
@@ -59,7 +59,7 @@ const BlogHomeCT2025 = async () => {
                                             </li>
 
                                         </ul>
-                                        <Link href={posts.specific_post[0].permalink} className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
+                                        <Link  href={posts.specific_post[0].permalink} className="link-btn" target="_blank" rel="noopener noreferrer">Read More <i className="far fa-chevron-double-right" ></i></Link>
                                     </div>
                                 </div>
                             </div>
@@ -68,8 +68,8 @@ const BlogHomeCT2025 = async () => {
                                     {posts.specific_post?.slice(1, 4).map((post, index) => (
                                         <div className="news-right-box" data-wow-delay=".3s" key={index}>
                                             <div className="thumb">
-                                            <Link href={post.permalink}><img src={post.image} alt="img" /></Link>
-                                                <Link href={post.permalink} className="post-box">
+                                            <Link href={post.permalink} target="_blank" rel="noopener noreferrer"><img src={post.image} alt={post.title}   /></Link>
+                                                <Link href={post.permalink} className="post-box" target="_blank" rel="noopener noreferrer">
                                                     {post.date}
                                                 </Link>
                                             </div>
@@ -85,9 +85,9 @@ const BlogHomeCT2025 = async () => {
                                                     </li>
                                                 </ul> */}
                                                 <h5>
-                                                    <Link href={post.permalink}>{post.title}</Link>
+                                                    <Link href={post.permalink} target="_blank" rel="noopener noreferrer">{post.title} </Link>
                                                 </h5>
-                                                <Link href={post.permalink} className="link-btn">
+                                                <Link href={post.permalink} className="link-btn" target="_blank" rel="noopener noreferrer">
                                                     Read More <i className="far fa-chevron-double-right"></i>
                                                 </Link>
                                             </div>

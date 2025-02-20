@@ -27,17 +27,28 @@ const Leaderboard = () => {
 
   return (
     <div className="mt-5">
+        <center>
       {windowSize && windowSize.width > 768 ? (
+        <>
+        {/* <h1>Desktop</h1> */}
+      
         <GPT
           adUnitPath="/67551462/A-Sports-RoS"
           slotSize={[[970, 250], [750, 300], [950, 90], [728, 90]]}
         />
+        </>
       ) : (
+        <>
+        
+        {/* <h1>Mobile</h1> */}
         <GPT
           adUnitPath="/67551462/A-Sports-RoS"
           slotSize={[[320, 100], [320, 50]]}
         />
+        </>
+
       )}
+      </center>
     </div>
   );
 };

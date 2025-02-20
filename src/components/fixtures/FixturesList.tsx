@@ -61,7 +61,16 @@ const FixturesList = () => {
                     </div>
                     <div className="title-text">
                       <h5>
-                        <Link href="#">{fixture.name}</Link>
+                      {fixture.permalink ? (
+                        <Link href={fixture.permalink} target="_blank" rel="noopener noreferrer">
+                          {fixture.name}
+                        </Link>
+                      ) : (
+                        <span>{fixture.name}</span> // Renders just the name without a link
+                      )}
+
+
+
                       </h5>
                       <ul className="post-time">
                         <li>

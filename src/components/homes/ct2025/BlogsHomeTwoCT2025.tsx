@@ -46,7 +46,7 @@ const BlogsHomeTwoCT2025 = ({ cat }) => {
             </h2>
           </div>
           <div className="news-btn d-none d-md-block wow fadeInUp" data-wow-delay=".3s">
-            <Link href="https://a-sports.tv/tag/champions-trophy-2025/" className="theme-btn red-btn">
+            <Link href="https://a-sports.tv/tag/champions-trophy-2025/" className="theme-btn red-btn" target="_blank" rel="noopener noreferrer">
               View All News
             </Link>
           </div>
@@ -62,14 +62,15 @@ const BlogsHomeTwoCT2025 = ({ cat }) => {
               >
                 <div className="news-box-items">
                   <div className="news-image">
-                    <img src={post.image} alt={post.title} />
+                    
+                    <Link href={post.permalink} target="_blank" rel="noopener noreferrer"><img src={post.image} alt={post.title} /> </Link>
                   </div>
                   <div className="news-content">
                     <span>{post.date}</span>
                     <h3>
-                      <Link href={post.permalink}>{post.title}</Link>
+                      <Link href={post.permalink} target="_blank" rel="noopener noreferrer">{post.title} </Link>
                     </h3>
-                    <Link href={post.permalink} className="link-btn">
+                    <Link href={post.permalink} className="link-btn" target="_blank" rel="noopener noreferrer">
                       Read More <i className="far fa-chevron-double-right"></i>
                     </Link>
                   </div>
