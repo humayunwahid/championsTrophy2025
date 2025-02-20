@@ -8,7 +8,7 @@ interface TeamDetailPageProps {
 
 // Fetch data on the server side
 async function getTeamData(teamId: string) {
-  const res = await fetch(`/api/squads/${teamId}`, { cache: "no-store" });
+  const res = await fetch(`http://localhost:3001/api/squads/${teamId}`, { cache: "no-store" });
   return res.json();
 }
 
