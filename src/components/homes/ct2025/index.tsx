@@ -30,7 +30,7 @@ import BlogsHomeTwoCT2025 from "./BlogsHomeTwoCT2025";
 import TeamDetail from "@/components/teamdetails/TeamDetail";
 
 const CT2025 = async () => {
-  const res = await fetch(`https://ct25.a-sports.tv/api/squads/Pakistan.php`, { cache: "no-store" });
+  const res = await fetch(`/api/squads/Pakistan`, { cache: "no-store" });
   const teamData = await res.json();
 
   return (
