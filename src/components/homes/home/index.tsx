@@ -30,14 +30,14 @@ const HomeOne = () => {
       <TopCategoryHomeOne />
       <AboutHomeOne />
 			<PopularCoursesHomeOne />
-			<MarqueeOne />
+			<MarqueeOne style_2={false} />
 			<ChooseHomeOne />
 			<TeamHomeOne />
 			<NewsletterHomeOne />
 			<TestimonialHomeOne />
 			<BrandsHomeOne />
 			<BlogHomeOne />
-			<MarqueeOne /> 
+			<MarqueeOne style_2={false} />
 			<FooterOne />      
 		</>
 	);

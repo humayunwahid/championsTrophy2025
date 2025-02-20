@@ -7,13 +7,13 @@ const FooterTwo = () => {
     <>
        <footer className="footer-section fix footer-bg">
             <div className="big-circle">
-                <img src="assets/img/footer/big-circle.png" alt="img" />
+                <img src="/assets/img/footer/big-circle.png" alt="img" />
             </div>
             <div className="circle-shape-2">
-                <img src="assets/img/footer/circle-2.png" alt="img" />
+                <img src="/assets/img/footer/circle-2.png" alt="img" />
             </div>
             <div className="Vector-shape-2">
-                <img src="assets/img/footer/Vector-2.png" alt="img" />
+                <img src="/assets/img/footer/Vector-2.png" alt="img" />
             </div>
             <div className="container">
                 {/* <div className="footer-banner-items">

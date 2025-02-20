@@ -22,7 +22,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/Pakistan">
                                         <img src="assets/img/team/pakistan.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -41,7 +41,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/India">
                                         <img src="assets/img/team/india.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -59,7 +59,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/New Zealand">
                                         <img src="assets/img/team/newzealand.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -78,7 +78,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/South Africa">
                                         <img src="assets/img/team/southafrica.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -96,7 +96,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6  col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/Afghanistan">
                                         <img src="assets/img/team/afghanistan.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -105,7 +105,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/Afhganistan"><h4>AFGHANISTAN</h4></Link>
+                                    <Link href="/teamdetails/Afghanistan"><h4>AFGHANISTAN</h4></Link>
 
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
@@ -115,7 +115,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/Australia">
                                         <img src="assets/img/team/austrailia.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -135,7 +135,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/Bangladesh">
                                         <img src="assets/img/team/bangladesh.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -153,7 +153,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6  col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="#">
+                                    <a href="/teamdetails/England">
                                         <img src="assets/img/team/england.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">

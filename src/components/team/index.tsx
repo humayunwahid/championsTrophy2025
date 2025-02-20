@@ -14,7 +14,7 @@ const Event = () => {
       <HeaderOne />
       <BreadcrumbEvent title="Participating Teams" subtitle="Teams" />
       <TeamList />
-			<MarqueeOne />
+			<MarqueeOne style_2={false} />
       <FooterTwo />
     </>
   );

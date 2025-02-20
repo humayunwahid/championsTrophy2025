@@ -4,9 +4,35 @@ import NiceSelect from "@/ui/NiceSelect";
 import Link from "next/link";
 import TeamList from "../team/TeamList";
 import { useEffect, useState } from "react";
+import BlogsHomeTwoCT2025 from "../homes/ct2025/BlogsHomeTwoCT2025";
 
+
+const formatDate = (isoString) => {
+  if (!isoString) return "Unknown"; // Handle missing or null values
+  const date = new Date(isoString);
+  
+  if (isNaN(date.getTime())) return "Invalid Date"; // Handle invalid dates
+
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'long', // Full month name
+    day: '2-digit',
+    year: 'numeric'
+  }).format(date);
+};
+
+
+const getOrdinalSuffix = (num) => {
+    if (typeof num !== "number" || isNaN(num)) return num; // Handle invalid input
+  
+    const suffixes = ["th", "st", "nd", "rd"];
+    const v = num % 100;
+    return num + (suffixes[(v - 20) % 10] || suffixes[v] || suffixes[0]);
+  };
+  
 const TeamDetail = ({ teamData, teamid }) => {
     const [isClient, setIsClient] = useState(false);
+
+    // console.log(JSON.stringify(teamData.players));
     // console.log(JSON.stringify(teamData));
     // This effect ensures that any client-side only logic is run in the browser.
     useEffect(() => {
@@ -20,28 +46,28 @@ const TeamDetail = ({ teamData, teamid }) => {
 
     return (
         <>
-            <section className="team-details-section section-padding pt-0">
+            <section className="team-details-section pt-0">
                 <div className="container">
                     <div className="team-details-wrapper custom">
                         <div className="team-details-items">
                             <div className="details-image">
                                 <img
-                                    src={teamData.image || "/assets/img/team/pakistan.jpg"}
-                                    alt="Team Detail"
+                                    src={"/assets/img/team/" + teamData.countryflag || ""}
+                                    alt={teamData.country}
                                 />
                             </div>
                             <div className="team-details-content">
-                                <h2>{teamData.country} | Cricket Team</h2>
+                                <h2>{teamData.country} Cricket Team</h2>
                                 <span>
-                                    {teamData.icctitles} ICC Titles
+                                   Won {teamData.icctitles} ICC Titles
                                 </span>
                                 <ul className="details-list">
-                                    <li>{teamData.iccpositions} Position in ODI Rankings</li>
+                                    <li>{getOrdinalSuffix(teamData.iccpositions)} Position in ODI Rankings</li>
                                     <li>{teamData.iccmatches} Matches</li>
                                     <li>{teamData.iccpoints} Points</li>
                                     <li>{teamData.iccratings} Ratings</li>
                                 </ul>
-                                <p className="mt-3">Last Updated - {teamData.icclastupd}</p>
+                                <p className="mt-3">Last Updated - {formatDate(teamData.icclastupd)}</p>
                             </div>
                         </div>
                     </div>
@@ -75,6 +101,9 @@ const TeamDetail = ({ teamData, teamid }) => {
                     </div>
                 </div>
             </section>
+
+            <BlogsHomeTwoCT2025 cat={teamData.country}/>
+
         </>
     );
 };

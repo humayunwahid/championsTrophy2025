@@ -8,6 +8,7 @@ export async function GET() {
         const db = client.db('champions-trophy');
         const collection = db.collection('standings');
         const data = await collection.find({}).sort({ points: -1 }).toArray();
+
         
         return NextResponse.json(data);
     } catch (error) {

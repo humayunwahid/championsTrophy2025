@@ -51,7 +51,7 @@ const Standings = () => {
   }, []);
 
   return (
-    <div className="p-4 rounded-lg max-w-full mx-auto text-center container">
+    <div className="p-4 rounded-lg max-w-full mx-auto text-center container section-padding p-4">
       <div className="section-title text-center">
                         <h6 className="wow fadeInUp">
                         Track Team Performance: Points, Matches, Wins & NRR
