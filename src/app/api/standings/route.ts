@@ -2,7 +2,8 @@ import { NextResponse } from 'next/server';
 import clientPromise from '@/lib/mongodb';
 
 // Disable Next.js API route caching
-export const fetchCache = 'force-no-store';
+export const dynamic = 'force-dynamic'; // Ensures no caching in Next.js 13+
+export const fetchCache = 'force-no-store'; // Disable API caching
 
 export async function GET() {
     try {
@@ -15,22 +16,18 @@ export async function GET() {
 
         // Sorting logic
         data.sort((a, b) => {
-            // First, sort by points in descending order
             if (b.points !== a.points) {
                 return b.points - a.points;
             }
-            
-            // If points are equal, sort by net run rate (converted to number)
-            const netRR_A = parseFloat(a.net_rr);
-            const netRR_B = parseFloat(b.net_rr);
-            
-            return netRR_B - netRR_A; // Higher net run rate comes first
+            return parseFloat(b.net_rr) - parseFloat(a.net_rr);
         });
 
-        // Return response with no-cache headers
+        // Return response with explicit cache prevention headers
         return NextResponse.json(data, {
             headers: {
                 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+                Pragma: 'no-cache',
+                Expires: '0',
             },
         });
     } catch (error) {
