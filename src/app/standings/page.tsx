@@ -20,7 +20,7 @@ const index = () => {
         <meta property="og:title" content="Champions Trophy 2025 Points Table" />
         <meta property="og:description" content="Check out the latest ICC Champions Trophy 2025 Points Table. Track team standings, net run rate, and match results as teams compete for the championship." />
         <meta property="og:image" content="/assets/img/featureImage/Standings.webp" />
-        <meta property="og:url" content="https://ct25.a-sports.tv/standings" />
+        <meta property="og:url" content="/standings" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Champions Trophy 2025 Points Table" />

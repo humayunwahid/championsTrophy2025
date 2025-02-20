@@ -22,7 +22,7 @@ const index = () => {
         <meta property="og:title" content="Champions Trophy 2025 Matches, News, Results and Teams" />
         <meta property="og:description" content="Keep abreast of all the action from the Champions Trophy 2025! Get match schedules, latest news, live scores, team details, and expert opinions." />
         <meta property="og:image" content="/images/champions-trophy-2025.jpg" />
-        <meta property="og:url" content="https://ct25.a-sports.tv/champions-trophy-2025" />
+        <meta property="og:url" content="/champions-trophy-2025" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Champions Trophy 2025 Matches, News, Results and Teams" />

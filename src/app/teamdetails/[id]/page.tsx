@@ -8,7 +8,7 @@ interface TeamDetailPageProps {
 
 // Fetch data on the server side
 async function getTeamData(teamId: string) {
-  const res = await fetch(`/api/squads/${teamId}`, { cache: "no-store" });
+  const res = await fetch(`https://ct25.a-sports.tv/api/squads/${teamId}.php`, { cache: "no-store" });
   return res.json();
 }
 
