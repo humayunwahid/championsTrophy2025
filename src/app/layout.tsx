@@ -15,7 +15,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
         />
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-RD4M0V2Q7P"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RD4M0V2Q7P"></script>
         <script dangerouslySetInnerHTML={{
             __html: `
                 window.dataLayer = window.dataLayer || [];
@@ -35,7 +35,7 @@ export default function RootLayout({
                   googletag.enableServices();
           });
             `
-        }} /> */}
+        }} />
       </head>
 
       {/* ✅ Google Analytics Script
