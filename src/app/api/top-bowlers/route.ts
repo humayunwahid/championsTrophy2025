@@ -8,7 +8,7 @@ export async function GET() {
     try {
         const client = await clientPromise;
         const db = client.db('champions-trophy');
-        const collection = db.collection('top-batters');
+        const collection = db.collection('top-bowlers');
 
         // Fetch data sorted by 'pos' in ascending order (1 for ascending, -1 for descending)
         const data = await collection.find({}).sort({ pos: 1 }).toArray();

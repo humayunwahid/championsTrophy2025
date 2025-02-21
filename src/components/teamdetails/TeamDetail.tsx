@@ -61,7 +61,7 @@ const TeamDetail = ({ teamData, teamid }) => {
                                 <span>
                                    Won {teamData.icctitles} ICC Titles
                                 </span>
-                                <ul className="details-list">
+                                <ul className="details-list p-2">
                                     <li>{getOrdinalSuffix(teamData.iccpositions)} Position in ODI Rankings</li>
                                     <li>{teamData.iccmatches} Matches</li>
                                     <li>{teamData.iccpoints} Points</li>

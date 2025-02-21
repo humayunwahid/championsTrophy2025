@@ -90,7 +90,7 @@ const menu_data:DataType[] = [
 	{
 		id: 2,
 		title: "Top Performers",
-		link: "/",
+		link: "/top-performers",
     icon: "fas fa-phone-rotary-no",
 		has_dropdown: false,
 	},

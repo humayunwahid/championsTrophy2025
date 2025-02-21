@@ -213,3 +213,48 @@ ul.details-list {
 
 }
 
+
+/* Top Performers */
+
+td.pos {
+  /* font-size: 25px; */
+  font-weight: 800;
+  color: #251e98;
+}
+
+td.pos.first {
+  font-size: 25px;
+}
+
+table.top-performer td {
+  font-weight: 700;
+  color: #000283;
+}
+
+img.plyer-image {
+  width: 30%;
+}
+td.name {
+  font-size: 25px;
+}
+
+td.flag {
+  font-size: 25px;
+}
+td.runs {
+  font-size: 25px;
+}
+td.p-4.flag img{
+  width: 15%
+}
+
+table.top-performer tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.top-performer thead tr {
+  border-bottom: 5px solid #da1900;
+}
+.prl-4{
+  padding: 0rem 1.5rem;
+}

@@ -37,6 +37,8 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             {/* <Link className="nav-link" href="/admin">Dashboard</Link> */}
             <Link className="nav-link" href="/admin/fixtures">Fixtures</Link>
             <Link className="nav-link" href="/admin/standings">Standings</Link>
+            <Link className="nav-link" href="/admin/top-batters">Top Batters</Link>
+            <Link className="nav-link" href="/admin/top-bowlers">Top Bowlers</Link>
             {/* <Link className="nav-link" href="/admin/users">Users</Link>
             <Link className="nav-link" href="/admin/settings">Settings</Link> */}
           </Nav>

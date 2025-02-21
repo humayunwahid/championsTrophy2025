@@ -32,7 +32,7 @@ const TeamList = () => {
                                 </div>
                                 <div className="content">
                                     {/* <a href="/teamdetails/pakistan"><h4>PAKISTAN</h4></a> */}
-                                    <Link href="/teamdetails/Pakistan"><h4>PAKISTAN</h4></Link>
+                                    <Link href="/teamdetails/Pakistan"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -50,7 +50,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/India"><h4>INDIA</h4></Link>
+                                    <Link href="/teamdetails/India"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -69,7 +69,7 @@ const TeamList = () => {
                                 </div>
                                 <div className="content">
 
-                                    <Link href="/teamdetails/New Zealand"><h4>NEW ZEALAND</h4></Link>
+                                    <Link href="/teamdetails/New Zealand"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -87,7 +87,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/South Africa"><h4>SOUTH AFRICA</h4></Link>
+                                    <Link href="/teamdetails/South Africa"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -105,7 +105,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/Afghanistan"><h4>AFGHANISTAN</h4></Link>
+                                    <Link href="/teamdetails/Afghanistan"></Link>
 
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
@@ -125,7 +125,7 @@ const TeamList = () => {
                                 </div>
                                 <div className="content">
 
-                                    <Link href="/teamdetails/Australia"><h4>AUSTRAILIA</h4></Link>
+                                    <Link href="/teamdetails/Australia"></Link>
 
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
@@ -144,7 +144,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/Bangladesh"><h4>BANGLADESH</h4></Link>
+                                    <Link href="/teamdetails/Bangladesh"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -162,7 +162,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teamdetails/England"><h4>ENGLAND</h4></Link>
+                                    <Link href="/teamdetails/England"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
