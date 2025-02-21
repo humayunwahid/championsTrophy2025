@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 const fetchBlogPosts = async (cat) => {
   try {
     const res = await fetch(
-      `https://a-sports.tv/api/jsonify.php/?count=4&cat=${cat}&post_type=post&tax=post_tag&page=1`
+      `https://a-sports.tv/api/jsonify.php/?count=4&cat=${cat}&post_type=post&tax=post_tag&page=0`
     );
     if (!res.ok) {
       throw new Error("Failed to fetch data");
