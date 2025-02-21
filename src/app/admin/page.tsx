@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import Wrapper from "@/layouts/Wrapper";
 import AdminLayout from "@/layouts/AdminLayout";
+import Head from "next/head";
 
 const AdminPage = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -21,12 +22,16 @@ const AdminPage = () => {
     if (!isAuthenticated) return <p>Redirecting...</p>;
 
     return (
-      <Wrapper>
+      <>
+      {/* Prevent search engine indexing */}
+      <Head>
+          <meta name="robots" content="noindex, nofollow" />
+      </Head>
         <AdminLayout>
         <h1>Admin Dashboard</h1>
         <p>Welcome to the admin panel.</p>
         </AdminLayout>
-      </Wrapper>
+      </>
     );
 };
 

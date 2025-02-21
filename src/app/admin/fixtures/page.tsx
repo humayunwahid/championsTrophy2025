@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Table, Button, Form, Modal } from "react-bootstrap";
 import AdminLayout from "@/layouts/AdminLayout";
+import Head from "next/head";
 
 interface Fixture {
   _id: string;
@@ -54,6 +55,11 @@ const FixturesPage = () => {
   };
 
   return (
+    <>
+    {/* Prevent search engine indexing */}
+    <Head>
+        <meta name="robots" content="noindex, nofollow" />
+    </Head>
     <AdminLayout>
       <div>
         <h1>FIXTURES</h1>
@@ -151,6 +157,7 @@ const FixturesPage = () => {
         </Modal.Footer>
       </Modal>
     </AdminLayout>
+    </>
   );
 };
 

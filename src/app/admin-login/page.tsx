@@ -1,18 +1,17 @@
-
-import Wrapper from "@/layouts/Wrapper";
-import { Metadata } from "next";
-
 import AdminLogin from "@/components/admin-login";
 
-export const metadata: Metadata = {
-	title: "Admin Login"
-};
+import Head from "next/head";
+
  
 const index = () => {
-  return (
-    <Wrapper>
+  return (   
+      <>
+      {/* Prevent search engine indexing */}
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <AdminLogin />
-    </Wrapper>
+      </>
   );
 };
 

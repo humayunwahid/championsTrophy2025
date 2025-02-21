@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Table, Button, Form, Modal } from "react-bootstrap";
 import AdminLayout from "@/layouts/AdminLayout";
 
+import Head from "next/head";
+
 interface Standing {
   _id: string;
   team: string;
@@ -68,6 +70,11 @@ const StandingsPage = () => {
   };
 
   return (
+    <>
+      {/* Prevent search engine indexing */}
+      <Head>
+          <meta name="robots" content="noindex, nofollow" />
+      </Head>
     <AdminLayout>
       <h1>STANDINGS</h1>
 
@@ -201,6 +208,7 @@ const StandingsPage = () => {
         </Modal.Footer>
       </Modal>
     </AdminLayout>
+    </>
   );
 };
 

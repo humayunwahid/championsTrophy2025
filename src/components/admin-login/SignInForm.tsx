@@ -69,6 +69,9 @@ const SignInForm = () => {
                                     <div className="col-lg-4">
                                         <button type="submit" className="theme-btn">Sign In</button>
                                     </div>
+                                    <div className="col-lg-4">
+                                    <a href="/" className="theme-btn" style={{ backgroundColor: '#6c757d', color: '#fff' }}>Go Home</a>
+                                    </div>
                                 </div>
                             </form>
                         </div>
