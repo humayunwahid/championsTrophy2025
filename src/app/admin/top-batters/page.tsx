@@ -54,20 +54,20 @@ const TopBattersPage = () => {
     try {
       const { _id, ...updatedData } = selectedBatter;
       
-      if (imageFile) {
-        const formData = new FormData();
-        formData.append("file", imageFile);
-        const uploadRes = await fetch("/api/upload", {
-          method: "POST",
-          body: formData,
-        });
-        const uploadData = await uploadRes.json();
-        if (uploadData.url) {
-          setSelectedBatter({ ...selectedBatter, player_image: uploadData.url });
-        }
-        // const uploadData = await uploadRes.json();
-        // updatedData.player_image = uploadData.url;
-      }
+      // if (imageFile) {
+      //   const formData = new FormData();
+      //   formData.append("file", imageFile);
+      //   const uploadRes = await fetch("/api/upload", {
+      //     method: "POST",
+      //     body: formData,
+      //   });
+      //   const uploadData = await uploadRes.json();
+      //   if (uploadData.url) {
+      //     setSelectedBatter({ ...selectedBatter, player_image: uploadData.url });
+      //   }
+      //   // const uploadData = await uploadRes.json();
+      //   // updatedData.player_image = uploadData.url;
+      // }
       
       const res = await fetch(`/api/top-batters/${_id}`, {
         method: "PUT",
