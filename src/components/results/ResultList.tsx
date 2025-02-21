@@ -54,7 +54,16 @@ const ResultList = () => {
                                         </span>
                                     </div>
                                     <div className="title-text">
-                                        <h5><Link href="#">{result.name}</Link></h5>
+                                        {/* <h5><Link href="#">{result.name}</Link></h5> */}
+                                        <h5>
+                                        {result.permalink ? (
+                                            <Link href={result.permalink} target="_blank" rel="noopener noreferrer">
+                                            {result.name}
+                                            </Link>
+                                        ) : (
+                                            <span>{result.name}</span> // Renders just the name without a link
+                                        )}
+                                        </h5>
                                         <ul className="post-time">
                                             <li>
                                                 <i className="far fa-map-marker-alt"></i>
@@ -74,7 +83,14 @@ const ResultList = () => {
                             </div>
 
                             {/* Dynamic Flag Images */}
-                            <div className="event-image d-flex align-items-center gap-2 grey-background rounded">
+                            {/* <div className="event-image d-flex align-items-center gap-2 grey-background rounded"> */}
+                            <div className="event-image d-flex flex-column align-items-start gap-2 grey-background rounded">
+                            
+                            {/* <b className="result-btn text-white rounded p-2">{result.result}</b> */}
+                            <p className={`fw-bold text-uppercase statuscompleted`}>
+                            {result.result}
+                            </p>
+                            <div className="d-flex align-items-center gap-2">
                                 {result.teams.map((team, index) => (
                                     <React.Fragment key={index}>
                                         <div>
@@ -92,9 +108,10 @@ const ResultList = () => {
                                     </React.Fragment>
                                 ))}
                             </div>
-                            <div className="event-btn"> 
-                                <b className="result-btn text-white rounded p-2">{result.result}</b>
                             </div>
+                            {/* <div className="event-btn"> 
+                                <b className="result-btn text-white rounded p-2">{result.result}</b>
+                            </div> */}
                         </div>
                     )
                 ))}
