@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/img/featureImage/TopPerformers.webp",
+        url: "/assets/img/featureImage/Top-Performers.webp",
         width: 1200,
         height: 630,
         alt: "Champions Trophy 2025 Top Performers",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "Discover the top performers of ICC Champions Trophy 2025. Explore standout bowlers and batsmen along with their key stats and match highlights.",
     images: ["/assets/img/featureImage/Top-Performers.webp"],
-  },
+  }, 
 };
 
 const index = () => {

@@ -36,6 +36,20 @@ export default function RootLayout({
           });
             `
         }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Champions Trophy 2025",
+            "url": "https://ct25.a-sports.tv/",
+            "description": "Keep abreast of all the action from the Champions Trophy 2025! Get match schedules, latest news, live scores, team details, and expert opinions.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "A-Sports TV",
+              "url": "https://ct25.a-sports.tv"
+            }
+          })
+        }} />
       </head>
       
 

@@ -10,17 +10,17 @@ export const metadata: Metadata = {
   keywords:
     "Champions Trophy, Champions Trophy 2025, Champions Trophy 2025 Points Table Pakistan, Champions Trophy 2025 Schedule, Champions Trophy 2025 Schedule Points Table pdf, ICC Champions Trophy 2025 rankings, Champions Trophy 2025 net run rate, Champions Trophy 2025 team standings, Champions Trophy 2025 match results",
   alternates: {
-    canonical: "/champions-trophy-2025",
+    canonical: "https://ct25.a-sports.tv/",
   },
   openGraph: {
     title: "Champions Trophy 2025 Matches, News, Results and Teams",
     description:
       "Keep abreast of all the action from the Champions Trophy 2025! Get match schedules, latest news, live scores, team details, and expert opinions.",
-    url: "/champions-trophy-2025",
+    url: "https://ct25.a-sports.tv/",
     type: "website",
     images: [
       {
-        url: "/images/champions-trophy-2025.jpg",
+        url: "/assets/img/featureImage/Home.webp",
         width: 1200,
         height: 630,
         alt: "Champions Trophy 2025",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Champions Trophy 2025 Matches, News, Results and Teams",
     description:
       "Get all the latest updates, schedules, results, and team details for Champions Trophy 2025. Stay informed with live scores and expert insights.",
-    images: ["/images/champions-trophy-2025.jpg"],
+    images: ["/assets/img/featureImage/Home.webp"],
   },
 };
 
