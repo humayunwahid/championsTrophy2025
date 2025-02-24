@@ -64,7 +64,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="/teams/new zealand">
+                                    <a href="/teams/new-zealand">
                                         <img src="assets/img/team/newzealand.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -74,7 +74,7 @@ const TeamList = () => {
                                 </div>
                                 <div className="content">
 
-                                    <Link href="/teams/new zealand"></Link>
+                                    <Link href="/teams/new-zealand"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>
@@ -83,7 +83,7 @@ const TeamList = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="team-card-items style-2">
                                 <div className="thumb">
-                                    <a href="/teams/south africa">
+                                    <a href="/teams/south-africa">
                                         <img src="assets/img/team/southafrica.jpg" alt="img" />
                                     </a>
                                     {/* <div className="social-icon">
@@ -92,7 +92,7 @@ const TeamList = () => {
                             </div> */}
                                 </div>
                                 <div className="content">
-                                    <Link href="/teams/south africa"></Link>
+                                    <Link href="/teams/south-africa"></Link>
 
                                     {/* <p>VIEW TEAM PROFILE</p> */}
                                 </div>

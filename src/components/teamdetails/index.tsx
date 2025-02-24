@@ -14,7 +14,8 @@ import Leaderboard from './../Ads/Leaderboard';
 const Event = ({ teamid, teamData }) => {
   // console.log(teamData + 78);
 
- 
+  const normalizedTeamId = decodeURIComponent(teamid).replace(/-/g, ' ');
+
   
   return (
     <>
@@ -22,7 +23,7 @@ const Event = ({ teamid, teamData }) => {
 
 
       <HeaderOne />
-      <BreadcrumbEvent title={decodeURIComponent(teamid) + " Cricket Team"} subtitle={decodeURIComponent(teamid) + " Team Details"} />
+      <BreadcrumbEvent title={`${normalizedTeamId} Cricket Team`} subtitle={`${normalizedTeamId} Team Details`} />
       <Leaderboard/>
       <TeamDetail teamData={teamData} />
       <div className="container p-4">

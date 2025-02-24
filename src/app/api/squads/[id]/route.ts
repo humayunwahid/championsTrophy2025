@@ -7,8 +7,11 @@ export async function GET(request: Request, { params }: { params: { id: string }
         const db = client.db('champions-trophy');
         const collection = db.collection('teams');
 
+        // Normalize the country name: replace hyphens with spaces
+        const normalizedId = params.id.replace(/-/g, ' ');
+
         // Find the team by the dynamic ID from the URL
-        const team = await collection.findOne({ country: params.id });  // Assuming "teamId" is the field that matches the ID in the URL
+        const team = await collection.findOne({ country: normalizedId });
 
         if (!team) {
             return NextResponse.json({ error: 'Team not found' }, { status: 404 });

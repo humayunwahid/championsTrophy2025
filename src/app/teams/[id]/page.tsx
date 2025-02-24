@@ -14,7 +14,10 @@ async function getTeamData(teamId: string) {
     throw new Error("API base URL is not defined in environment variables.");
   }
 
-  const res = await fetch(`${API_BASE_URL}/api/squads/${teamId}`, { cache: "no-store" });
+  // Normalize ID by replacing hyphens with spaces
+  const normalizedId = teamId.replace(/-/g, ' '); 
+
+  const res = await fetch(`${API_BASE_URL}/api/squads/${normalizedId}`, { cache: "no-store" });
 
   if (!res.ok) {
     throw new Error(`API error: ${res.status} ${res.statusText}`);
@@ -25,7 +28,9 @@ async function getTeamData(teamId: string) {
 
 // ✅ Dynamic Metadata Function
 export async function generateMetadata({ params }: TeamDetailPageProps): Promise<Metadata> {
-  const teamData = await getTeamData(params.id);
+  // Normalize ID before fetching
+  const normalizedId = params.id.replace(/-/g, ' '); 
+  const teamData = await getTeamData(normalizedId);
 
   const teamName = teamData?.country || "Unknown Team"; // Extract team name dynamically
   const tournament = "ICC Champions Trophy 2025";
@@ -48,7 +53,7 @@ export async function generateMetadata({ params }: TeamDetailPageProps): Promise
       type: "website",
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/team/${params.id}.webp`, // Assuming team images follow this naming pattern
+          url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/team/${params.id}.webp`,
           width: 1200,
           height: 630,
           alt: `${teamName} Squad`,
@@ -60,14 +65,15 @@ export async function generateMetadata({ params }: TeamDetailPageProps): Promise
       site: "@asportstvpk",
       title,
       description,
-      images: [`${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/team/${params.id}.webp`], // Twitter image
+      images: [`${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/team/${params.id}.webp`],
     },
   };
 }
 
 // ✅ Server Component with Async Data Fetching
 export default async function TeamDetailPage({ params }: TeamDetailPageProps) {
-  const teamData = await getTeamData(params.id);
+  const normalizedId = params.id.replace(/-/g, ' '); // Normalize before fetching
+  const teamData = await getTeamData(normalizedId);
 
   return (
     <Wrapper>
