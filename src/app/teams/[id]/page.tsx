@@ -6,6 +6,16 @@ interface TeamDetailPageProps {
   params: { id: string };
 }
 
+const toTitleCase = (str) => {
+  if (!str) return "";
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+
 // ✅ Fetch team data dynamically
 async function getTeamData(teamId: string) {
   const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
@@ -32,10 +42,10 @@ export async function generateMetadata({ params }: TeamDetailPageProps): Promise
   const normalizedId = params.id.replace(/-/g, ' '); 
   const teamData = await getTeamData(normalizedId);
 
-  const teamName = teamData?.country || "Unknown Team"; // Extract team name dynamically
-  const tournament = "ICC Champions Trophy 2025";
+  const teamName = teamData?.country ? toTitleCase(teamData.country) : "Unknown Team";
 
-  const title = `${teamName} - Team Details, Squads, Rankings & News | ${tournament}`;
+  const tournament = "ICC Champions Trophy 2025";
+  const title = `${teamName} Squads, Rankings, News & Team Details | ${tournament}`;
   const description = `Get the latest details about ${teamName} in the ${tournament}, including squad information, rankings, news, and more. Stay updated with ${teamName}'s performance.`;
   const keywords = `${teamName}, ${teamName} squad, ${teamName} rankings, ${teamName} news, ${tournament}, ICC Champions Trophy, cricket, sports, team stats`;
 
