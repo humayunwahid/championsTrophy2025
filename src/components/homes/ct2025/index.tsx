@@ -62,6 +62,9 @@ const CT2025 = async () => {
       <FixturesList />
       <PakistanTeamSquad teamData={teamData} teamid="Pakistan" />
       <BlogsHomeTwoCT2025 cat="champions-trophy-2025" />
+      <div className="container p-4">
+      <p><b>Champions Trophy</b> - Stay updated with comprehensive coverage that includes detailed match schedules, live scores, and in-depth team standings—featuring essential insights such as the Champions Trophy 2025 Points Table for Pakistan, ICC rankings, and the latest news updates. This is your go-to destination for all things Champions Trophy 2025, ensuring that you never miss a moment of the action.</p>
+      </div>
 			<MarqueeOne style_2={false} />
       <FooterTwo />
     </>
