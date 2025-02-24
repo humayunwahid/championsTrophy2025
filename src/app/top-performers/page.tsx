@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Champions Trophy 2025 Top Performers",
     description:
       "Discover the top performers of ICC Champions Trophy 2025. Explore standout bowlers and batsmen along with their key stats and match highlights.",
-    images: ["/assets/img/featureImage/TopPerformers.webp"],
+    images: ["/assets/img/featureImage/Top-Performers.webp"],
   },
 };
 
