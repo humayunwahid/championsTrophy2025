@@ -37,7 +37,7 @@ const CT2025 = async () => {
     throw new Error("API base URL is not defined in environment variables.");
   }
 
-  const res = await fetch(`${API_BASE_URL}/api/squads/Pakistan`, { cache: "no-store" });
+  const res = await fetch(`${API_BASE_URL}/api/squads/pakistan`, { cache: "no-store" });
 
   if (!res.ok) {
     throw new Error(`API error: ${res.status} ${res.statusText}`);

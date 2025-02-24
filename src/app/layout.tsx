@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 import "../styles/index.scss";
 import "../../globals.css";
 import Script from "next/script";
+import ErrorBoundary from "../components/ErrorBoundary";
+import ErrorBoundaryWrapper from './../components/ErrorBoundaryWrapper';
 
 
 export default function RootLayout({
@@ -86,7 +88,9 @@ export default function RootLayout({
         `}
       </Script> */}
 
-      <body>{children}</body>
+      <body>
+        <ErrorBoundaryWrapper>{children}</ErrorBoundaryWrapper>
+      </body>
     </html>
   );
 }
