@@ -74,6 +74,8 @@ const TeamDetail = ({ teamData, teamid }) => {
                 </div>
             </section>
 
+            
+
             <section className="team-section-5 fix section-padding pt-0">
                 <div className="container">
                     <div className="section-title  text-center">
