@@ -9,7 +9,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta property="og:image" content="/assets/img/featureImage/Home.webp" />
         <link rel="icon" href="/favicon.png" />
         <link
           rel="stylesheet"
