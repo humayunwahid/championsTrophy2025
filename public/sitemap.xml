@@ -11,7 +11,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ct25.a-sports.tv/standings</loc>
+    <loc>https://ct25.a-sports.tv/points-table</loc>
     <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>

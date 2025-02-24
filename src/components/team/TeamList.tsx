@@ -9,12 +9,6 @@ const TeamList = () => {
     return (
         <>
         
-      <style jsx>{`
-        h1 {
-          font-size: 42px; /* Matches h2 size */
-          font-weight: bold;
-        }
-      `}</style>
             <section className="team-section-5 fix section-padding p-4">
                 <div className="container">
                     <div className="section-title  text-center">
@@ -24,7 +18,7 @@ const TeamList = () => {
                         {/* <h2 className="wow fadeInUp" data-wow-delay=".3s">
                             CHAMPIONS TROPHY 2025
                         </h2> */}
-                        <h1 className="wow fadeInUp text-2xl md:text-3xl lg:text-4xl font-bold" data-wow-delay=".3s">
+                        <h1 className="wow fadeInUp text-2xl md:text-3xl lg:text-4xl font-bold custom-h1" data-wow-delay=".3s">
                             CHAMPIONS TROPHY 2025
                         </h1>
 

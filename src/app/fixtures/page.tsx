@@ -5,6 +5,7 @@ import Wrapper from "@/layouts/Wrapper";
 import React from "react";
 
 export const metadata: Metadata = {
+  
   title: "Champions Trophy 2025 Fixtures",
   description:
     "Stay updated with the latest fixtures of the ICC Champions Trophy 2025. Get the complete schedule of all matches, including dates, times, venues, and teams.",
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
     description:
       "Stay updated with the complete schedule of ICC Champions Trophy 2025. Get match dates, timings, venues, and more!",
     url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/fixtures`,
-    type: "website",
+    type: "website", 
+
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Fixtures.webp`,
@@ -36,6 +38,7 @@ export const metadata: Metadata = {
       "Stay updated with the complete schedule of ICC Champions Trophy 2025. Get match dates, timings, venues, and more!",
     images: [`${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Fixtures.webp`],
   },
+  
 };
 
 const index = () => {

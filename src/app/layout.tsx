@@ -3,12 +3,14 @@ import "../styles/index.scss";
 import "../../globals.css";
 import Script from "next/script";
 
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <head>
+        
         <link rel="icon" href="/favicon.png" />
         <link
           rel="stylesheet"
@@ -24,6 +26,7 @@ export default function RootLayout({
             `
         }} />
         <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+        <meta property="og:updated_time" content={new Date().toISOString()} />
         <script dangerouslySetInnerHTML={{
             __html: `
                 window.googletag = window.googletag || {cmd: []};

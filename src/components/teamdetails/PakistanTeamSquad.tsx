@@ -24,10 +24,10 @@ const PakistanTeamSquad = ({ teamData, teamid }) => {
                 <div className="container">
                     <div className="section-title  text-center">
                         <h6 className="wow fadeInUp">
-                            {teamData.country} Squad For
+                            {teamData.country} Squad
                         </h6>
-                        <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                            CHAMPIONS TROPHY 2025
+                        <h2 className="wow fadeInUp text-uppercase" data-wow-delay=".3s">
+                        Unveiling the Warriors
                         </h2>
                     </div>
                     <div className="row">

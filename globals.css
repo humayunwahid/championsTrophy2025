@@ -202,6 +202,12 @@ ul.details-list {
 .team-details-wrapper .team-details-items .team-details-content .details-list{
   padding: 10px !important;
 }
+
+
+.custom-h1 {
+  font-size: 32px !important; /* Matches h2 size */
+  font-weight: bold;
+}
 }
 
 .title-text a{
@@ -257,4 +263,10 @@ table.top-performer thead tr {
 }
 .prl-4{
   padding: 0rem 1.5rem;
+}
+
+
+.custom-h1 {
+  font-size: 55px ; /* Matches h2 size */
+  font-weight: bold;
 }

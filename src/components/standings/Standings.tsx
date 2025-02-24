@@ -57,7 +57,7 @@ const Standings = () => {
                         Track Team Performance: Points, Matches, Wins & NRR
                         </h6>
                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                        STANDINGS
+                        POINTS TABLE
                         </h2>
                     </div>
       <div className="mb-4 text-center">

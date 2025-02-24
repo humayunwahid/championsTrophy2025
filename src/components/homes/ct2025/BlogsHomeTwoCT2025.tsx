@@ -41,8 +41,8 @@ const BlogsHomeTwoCT2025 = ({ cat }) => {
         <div className="section-title-area">
           <div className="section-title">
             <h6 className="wow fadeInUp">Latest News</h6>
-            <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              CHAMPIONS TROPHY 2025
+            <h2 className="wow fadeInUp text-uppercase" data-wow-delay=".3s">
+            Fresh Updates, Exclusive Cricket Scoop
             </h2>
           </div>
           <div className="news-btn d-none d-md-block wow fadeInUp" data-wow-delay=".3s">
