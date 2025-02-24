@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow:
+
+User-agent: *
+Disallow:
+
+Sitemap: https://ct25.a-sports.tv/sitemap.xml

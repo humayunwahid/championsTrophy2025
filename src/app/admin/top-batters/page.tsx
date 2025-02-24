@@ -12,7 +12,7 @@ interface Batter {
   player_name: string;
   player_image: string;
   runs: number;
-  innings: number;
+  matches: number;
 }
 
 const TopBattersPage = () => {
@@ -55,18 +55,18 @@ const TopBattersPage = () => {
       const { _id, ...updatedData } = selectedBatter;
       
       // if (imageFile) {
-      //   const formData = new FormData();
-      //   formData.append("file", imageFile);
-      //   const uploadRes = await fetch("/api/upload", {
-      //     method: "POST",
-      //     body: formData,
-      //   });
-      //   const uploadData = await uploadRes.json();
-      //   if (uploadData.url) {
-      //     setSelectedBatter({ ...selectedBatter, player_image: uploadData.url });
-      //   }
-      //   // const uploadData = await uploadRes.json();
-      //   // updatedData.player_image = uploadData.url;
+        const formData = new FormData();
+        // formData.append("file", imageFile);
+        // const uploadRes = await fetch("/api/upload", {
+        //   method: "POST",
+        //   body: formData,
+        // });
+        // const uploadData = await uploadRes.json();
+        // if (uploadData.url) {
+        //   setSelectedBatter({ ...selectedBatter, player_image: uploadData.url });
+        // }
+        // const uploadData = await uploadRes.json();
+        // updatedData.player_image = uploadData.url;
       // }
       
       const res = await fetch(`/api/top-batters/${_id}`, {
@@ -106,7 +106,7 @@ const TopBattersPage = () => {
                 <th>Player</th>
                 <th>Team</th>
                 <th>Runs</th>
-                <th>Innings</th>
+                <th>Matches</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -115,12 +115,11 @@ const TopBattersPage = () => {
                 <tr key={batter._id}>
                   <td>{batter.pos}</td>
                   <td>
-                    <img src={batter.player_image} alt={batter.player_name} width="50" height="50" style={{ borderRadius: "50%" }} />
-                    {" "}{batter.player_name}
+                    {batter.name}
                   </td>
                   <td>{batter.team}</td>
                   <td>{batter.runs}</td>
-                  <td>{batter.innings}</td>
+                  <td>{batter.matches}</td>
                   <td>
                     <Button variant="warning" onClick={() => handleEdit(batter)}>Edit</Button>
                   </td>
@@ -154,8 +153,8 @@ const TopBattersPage = () => {
                   <Form.Label>Player Name</Form.Label>
                   <Form.Control
                     type="text"
-                    value={selectedBatter.player_name}
-                    onChange={(e) => setSelectedBatter({ ...selectedBatter, player_name: e.target.value })}
+                    value={selectedBatter.name}
+                    onChange={(e) => setSelectedBatter({ ...selectedBatter, name: e.target.value })}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -175,11 +174,11 @@ const TopBattersPage = () => {
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                  <Form.Label>Innings</Form.Label>
+                  <Form.Label>Matches</Form.Label>
                   <Form.Control
                     type="number"
-                    value={selectedBatter.innings}
-                    onChange={(e) => setSelectedBatter({ ...selectedBatter, innings: Number(e.target.value) })}
+                    value={selectedBatter.matches}
+                    onChange={(e) => setSelectedBatter({ ...selectedBatter, matches: Number(e.target.value) })}
                   />
                 </Form.Group>
               </Form>
