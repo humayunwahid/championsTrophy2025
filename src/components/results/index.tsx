@@ -16,6 +16,9 @@ const Event = () => {
       <BreadcrumbEvent title="Results" subtitle="Results" />
       <Leaderboard/>
       <ResultList />
+      <div className="container p-4">
+      <p><b>Champions Trophy - Results:</b> Stay on top of every moment with our dedicated Champions Trophy 2025 Results page. Here, you’ll find comprehensive updates on match outcomes, detailed scorecards, and the latest team performances. Whether you’re looking to review a recent game or track the tournament’s progress through real-time standings and points tables, our page provides all the essential insights. Follow the thrilling journey of each team as they battle for cricketing glory, and never miss a beat of the action.</p>
+      </div>
 			<MarqueeOne style_2={false} />
       <FooterTwo />
     </>

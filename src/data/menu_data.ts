@@ -68,8 +68,8 @@ const menu_data:DataType[] = [
 	
 	{
 		id: 2,
-		title: "Standings",
-		link: "/standings",
+		title: "Points Table",
+		link: "/points-table",
     icon: "fas fa-phone-rotary-no",
 		has_dropdown: false,
 	},

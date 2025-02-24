@@ -14,9 +14,9 @@ const TeamList = () => {
                         <h6 className="wow fadeInUp">
                             Teams Participating in
                         </h6>
-                        <h2 className="wow fadeInUp" data-wow-delay=".3s">
+                        <h1 className="wow fadeInUp" data-wow-delay=".3s">
                             CHAMPIONS TROPHY 2025
-                        </h2>
+                        </h1>
                     </div>
                     <div className="row">
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
