@@ -10,17 +10,17 @@ export const metadata: Metadata = {
   keywords:
     "Champions Trophy 2025 Results, ICC Champions Trophy 2025 Scores, Champions Trophy 2025 Match Results, ICC Champions Trophy 2025 Scorecard, Champions Trophy 2025 Team Standings, Champions Trophy 2025 Points Table",
   alternates: {
-    canonical: "https://ct25.a-sports.tv/results",
+    canonical: `${process.env.NEXT_PUBLIC_API_BASE_URL}/results`,
   },
   openGraph: {
     title: "Champions Trophy 2025 Results",
     description:
       "Stay updated with the latest results of ICC Champions Trophy 2025. Check match scores, team performances, and standings!",
-    url: "/results",
+    url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/results`,
     type: "website",
     images: [
       {
-        url: "/assets/img/featureImage/Results.webp",
+        url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Results.webp`,
         width: 1200,
         height: 630,
         alt: "Champions Trophy 2025 Results",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Champions Trophy 2025 Results",
     description:
       "Stay updated with the latest results of ICC Champions Trophy 2025. Check match scores, team performances, and standings!",
-    images: ["/assets/img/featureImage/Results.webp"],
+    images: [`${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Results.webp`],
   },
 };
 

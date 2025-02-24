@@ -11,17 +11,17 @@ export const metadata: Metadata = {
   keywords:
     "Champions Trophy 2025 Fixtures, Champions Trophy 2025 Schedule, ICC Champions Trophy 2025 Match List, Champions Trophy 2025 Match Dates, Champions Trophy 2025 Venues, Champions Trophy 2025 Time Table",
   alternates: {
-    canonical: "https://ct25.a-sports.tv/fixtures",
+    canonical: `${process.env.NEXT_PUBLIC_API_BASE_URL}/fixtures`,
   },
   openGraph: {
     title: "Champions Trophy 2025 Fixtures",
     description:
       "Stay updated with the complete schedule of ICC Champions Trophy 2025. Get match dates, timings, venues, and more!",
-    url: "/fixtures",
+    url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/fixtures`,
     type: "website",
     images: [
       {
-        url: "/assets/img/featureImage/Fixtures.webp",
+        url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Fixtures.webp`,
         width: 1200,
         height: 630,
         alt: "Champions Trophy 2025 Fixtures",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Champions Trophy 2025 Fixtures",
     description:
       "Stay updated with the complete schedule of ICC Champions Trophy 2025. Get match dates, timings, venues, and more!",
-    images: ["/assets/img/featureImage/Fixtures.webp"],
+    images: [`${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Fixtures.webp`],
   },
 };
 

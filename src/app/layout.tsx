@@ -41,12 +41,12 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Champions Trophy 2025",
-            "url": "https://ct25.a-sports.tv/",
+            "url": `${process.env.NEXT_PUBLIC_API_BASE_URL}`,
             "description": "Keep abreast of all the action from the Champions Trophy 2025! Get match schedules, latest news, live scores, team details, and expert opinions.",
             "publisher": {
               "@type": "Organization",
               "name": "A-Sports TV",
-              "url": "https://ct25.a-sports.tv"
+              "url": `${process.env.NEXT_PUBLIC_API_BASE_URL}`
             }
           })
         }} />

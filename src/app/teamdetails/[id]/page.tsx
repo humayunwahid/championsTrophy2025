@@ -39,16 +39,16 @@ export async function generateMetadata({ params }: TeamDetailPageProps): Promise
     description,
     keywords,
     alternates: {
-      canonical: `https://ct25.a-sports.tv/teamdetails/${params.id}`,
+      canonical: `${process.env.NEXT_PUBLIC_API_BASE_URL}/teamdetails/${params.id}`,
     },
     openGraph: {
       title,
       description,
-      url: `/teams/${params.id}`,
+      url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/teams/${params.id}`,
       type: "website",
       images: [
         {
-          url: `/assets/img/team/${params.id}.webp`, // Assuming team images follow this naming pattern
+          url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/team/${params.id}.webp`, // Assuming team images follow this naming pattern
           width: 1200,
           height: 630,
           alt: `${teamName} Squad`,
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: TeamDetailPageProps): Promise
       site: "@asportstvpk",
       title,
       description,
-      images: [`/assets/img/team/${params.id}.webp`], // Twitter image
+      images: [`${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/team/${params.id}.webp`], // Twitter image
     },
   };
 }

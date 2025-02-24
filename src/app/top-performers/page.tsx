@@ -10,17 +10,17 @@ export const metadata: Metadata = {
   keywords:
     "Champions Trophy 2025 Top Performers, Top Bowlers Champions Trophy 2025, Top Batsmen Champions Trophy 2025, ICC Champions Trophy 2025 Stats, Champions Trophy 2025 Best Performers",
   alternates: {
-    canonical: "https://ct25.a-sports.tv/top-performers",
+    canonical: `${process.env.NEXT_PUBLIC_API_BASE_URL}/top-performers`,
   },
   openGraph: {
     title: "Champions Trophy 2025 Top Performers",
     description:
       "Discover the top performers of ICC Champions Trophy 2025. Explore standout bowlers and batsmen along with their key stats and match highlights.",
-    url: "/top-performers",
+    url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/top-performers`,
     type: "website",
     images: [
       {
-        url: "/assets/img/featureImage/Top-Performers.webp",
+        url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Top-Performers.webp`,
         width: 1200,
         height: 630,
         alt: "Champions Trophy 2025 Top Performers",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Champions Trophy 2025 Top Performers",
     description:
       "Discover the top performers of ICC Champions Trophy 2025. Explore standout bowlers and batsmen along with their key stats and match highlights.",
-    images: ["/assets/img/featureImage/Top-Performers.webp"],
+    images: [`${process.env.NEXT_PUBLIC_API_BASE_URL}/assets/img/featureImage/Top-Performers.webp`],
   }, 
 };
 
