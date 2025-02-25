@@ -6,12 +6,12 @@ export async function PUT(req, { params }) {
     try {
         const client = await clientPromise;
         const db = client.db("champions-trophy");
-        const collection = db.collection("top-batters");
+        const collection = db.collection("top-bowlers");
 
         const { id } = params;
         const updateData = await req.json();
 
-        const validFields = ["pos", "team", "name", "player_image", "runs", "matches"];
+        const validFields = ["pos", "team", "name", "wickets", "matches"];
         const filteredUpdateData = {};
 
         for (const key of validFields) {
@@ -30,13 +30,13 @@ export async function PUT(req, { params }) {
         );
 
         if (result.matchedCount === 0) {
-            return NextResponse.json({ error: "Batter not found" }, { status: 404 });
+            return NextResponse.json({ error: "Bowler not found" }, { status: 404 });
         }
 
-        return NextResponse.json({ message: "Batter updated successfully" }, { status: 200 });
+        return NextResponse.json({ message: "Bowler updated successfully" }, { status: 200 });
 
     } catch (error) {
-        console.error("Error updating batter:", error);
-        return NextResponse.json({ error: "Failed to update batter" }, { status: 500 });
+        console.error("Error updating Bowler:", error);
+        return NextResponse.json({ error: "Failed to update Bowler" }, { status: 500 });
     }
 }

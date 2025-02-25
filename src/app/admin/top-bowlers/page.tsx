@@ -5,40 +5,40 @@ import { Table, Button, Form, Modal } from "react-bootstrap";
 import AdminLayout from "@/layouts/AdminLayout";
 import Head from "next/head";
 
-interface Batter {
+interface Bowler {
   _id: string;
   pos: number;
   team: string;
   player_name: string;
   player_image: string;
-  runs: number;
+  wickets: number;
   matches: number;
 }
 
-const TopBattersPage = () => {
-  const [batters, setBatters] = useState<Batter[]>([]);
+const TopBowlersPage = () => {
+  const [bowlers, setBowlers] = useState<Bowler[]>([]);
   const [loading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
-  const [selectedBatter, setSelectedBatter] = useState<Batter | null>(null);
+  const [selectedBowler, setSelectedBowler] = useState<Bowler | null>(null);
   const [imageFile, setImageFile] = useState<File | null>(null);
 
   useEffect(() => {
-    fetchBatters();
+    fetchBowlers();
   }, []);
 
-  const fetchBatters = async () => {
+  const fetchBowlers = async () => {
     try {
-      const res = await fetch("/api/top-batters");
+      const res = await fetch("/api/top-bowlers");
       const data = await res.json();
-      setBatters(data);
+      setBowlers(data);
       setLoading(false);
     } catch (error) {
-      console.error("Error fetching top batters:", error);
+      console.error("Error fetching top bowlers:", error);
     }
   };
 
-  const handleEdit = (batter: Batter) => {
-    setSelectedBatter(batter);
+  const handleEdit = (bowler: Bowler) => {
+    setSelectedBowler(bowler);
     setShow(true);
   };
 
@@ -49,11 +49,11 @@ const TopBattersPage = () => {
   };
 
   const handleSave = async () => {
-    if (!selectedBatter) return;
+    if (!selectedBowler) return;
     
     try {
-      const { _id, ...updatedData } = selectedBatter;
-      console.log(selectedBatter);
+      const { _id, ...updatedData } = selectedBowler;
+      console.log(selectedBowler);
       // if (imageFile) {
         const formData = new FormData();
         // formData.append("file", imageFile);
@@ -69,22 +69,22 @@ const TopBattersPage = () => {
         // updatedData.player_image = uploadData.url;
       // }
       
-      const res = await fetch(`/api/top-batters/${_id}`, {
+      const res = await fetch(`/api/top-bowlers/${_id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedData),
       });
 
       if (res.ok) {
-        alert("Batter updated successfully");
+        alert("Bowler updated successfully");
         setShow(false);
-        fetchBatters();
+        fetchBowlers();
       } else {
         const errorData = await res.json();
         alert(`Error: ${errorData.error}`);
       }
     } catch (error) {
-      console.error("Error updating batter:", error);
+      console.error("Error updating bowler:", error);
     }
   };
 
@@ -94,7 +94,7 @@ const TopBattersPage = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
       <AdminLayout>
-        <h1>Top Batters</h1>
+        <h1>Top Bowlers</h1>
 
         {loading ? (
           <p>Loading...</p>
@@ -105,23 +105,23 @@ const TopBattersPage = () => {
                 <th>Position</th>
                 <th>Player</th>
                 <th>Team</th>
-                <th>Runs</th>
+                <th>Wickets</th>
                 <th>Matches</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {batters.map((batter) => (
-                <tr key={batter._id}>
-                  <td>{batter.pos}</td>
+              {bowlers.map((bowler) => (
+                <tr key={bowler._id}>
+                  <td>{bowler.pos}</td>
                   <td>
-                    {batter.name}
+                    {bowler.name}
                   </td>
-                  <td>{batter.team}</td>
-                  <td>{batter.runs}</td>
-                  <td>{batter.matches}</td>
+                  <td>{bowler.team}</td>
+                  <td>{bowler.wickets}</td>
+                  <td>{bowler.matches}</td>
                   <td>
-                    <Button variant="warning" onClick={() => handleEdit(batter)}>Edit</Button>
+                    <Button variant="warning" onClick={() => handleEdit(bowler)}>Edit</Button>
                   </td>
                 </tr>
               ))}
@@ -132,10 +132,10 @@ const TopBattersPage = () => {
         {/* Edit Modal */}
         <Modal show={show} onHide={() => setShow(false)}>
           <Modal.Header closeButton>
-            <Modal.Title>Edit Batter</Modal.Title>
+            <Modal.Title>Edit Bowler</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {selectedBatter && (
+            {selectedBowler && (
               <Form>
                 <Form.Group className="mb-3">
                   <Form.Label>Player Image</Form.Label>
@@ -145,16 +145,16 @@ const TopBattersPage = () => {
                   <Form.Label>Position</Form.Label>
                   <Form.Control
                     type="number"
-                    value={selectedBatter.pos}
-                    onChange={(e) => setSelectedBatter({ ...selectedBatter, pos: Number(e.target.value) })}
+                    value={selectedBowler.pos}
+                    onChange={(e) => setSelectedBowler({ ...selectedBowler, pos: Number(e.target.value) })}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Label>Player Name</Form.Label>
                   <Form.Control
                     type="text"
-                    value={selectedBatter.name}
-                    onChange={(e) => setSelectedBatter({ ...selectedBatter, name: e.target.value })}
+                    value={selectedBowler.name}
+                    onChange={(e) => setSelectedBowler({ ...selectedBowler, name: e.target.value })}
                   />
                 </Form.Group>
                 {/* <Form.Group className="mb-3">
@@ -170,8 +170,8 @@ const TopBattersPage = () => {
                 <Form.Group className="mb-3">
                 <Form.Label>Team</Form.Label>
                 <Form.Select
-                  value={selectedBatter.team}
-                  onChange={(e) => setSelectedBatter({ ...selectedBatter, team: e.target.value })}
+                  value={selectedBowler.team}
+                  onChange={(e) => setSelectedBowler({ ...selectedBowler, team: e.target.value })}
                 >
                   <option value="England">England</option>
                   <option value="India">India</option>
@@ -186,19 +186,19 @@ const TopBattersPage = () => {
 
 
                 <Form.Group className="mb-3">
-                  <Form.Label>Runs</Form.Label>
+                  <Form.Label>Wickets</Form.Label>
                   <Form.Control
                     type="number"
-                    value={selectedBatter.runs}
-                    onChange={(e) => setSelectedBatter({ ...selectedBatter, runs: Number(e.target.value) })}
+                    value={selectedBowler.wickets}
+                    onChange={(e) => setSelectedBowler({ ...selectedBowler, wickets: Number(e.target.value) })}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
                   <Form.Label>Matches</Form.Label>
                   <Form.Control
                     type="number"
-                    value={selectedBatter.matches}
-                    onChange={(e) => setSelectedBatter({ ...selectedBatter, matches: Number(e.target.value) })}
+                    value={selectedBowler.matches}
+                    onChange={(e) => setSelectedBowler({ ...selectedBowler, matches: Number(e.target.value) })}
                   />
                 </Form.Group>
               </Form>
@@ -214,4 +214,4 @@ const TopBattersPage = () => {
   );
 };
 
-export default TopBattersPage;
+export default TopBowlersPage;
