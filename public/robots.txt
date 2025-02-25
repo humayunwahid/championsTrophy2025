@@ -1,7 +1,42 @@
 User-agent: Googlebot
-Disallow:
+Allow: /
 
-User-agent: *
-Disallow:
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Allow social media bots
+User-agent: facebookexternalhit/
+Allow: /
+
+User-agent: LinkedInBot
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+# Allow Applebot
+User-agent: Applebot
+Allow: /
+
+# Allow Google's specialized bots
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
 
 Sitemap: https://ct25.a-sports.tv/sitemap.xml
